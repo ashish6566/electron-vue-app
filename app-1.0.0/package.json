@@ -1,0 +1,9 @@
+{
+  "name": "app-1.0.0",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-service": "^3.11.0"
+  }
+}
