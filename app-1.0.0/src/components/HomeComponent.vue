@@ -2,7 +2,8 @@
   <div class="home">
     <h1>{{ msg }}</h1>
     <p>
-      Lets you easily serve the school management
+      Lets you perform the School Management
+      <br/>more conveniently
     </p>
     <h3>Dashboards</h3>
     <div class="grid-dashboards">

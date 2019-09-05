@@ -1,5 +1,5 @@
 <template>
   <div class="exams-score">
-    <h1>This is an about page</h1>
+    <h1>Manage Exams and Scores</h1>
   </div>
 </template>
