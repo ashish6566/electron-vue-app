@@ -8,34 +8,39 @@
     <h3>Dashboards</h3>
     <div class="grid-dashboards">
       <div class="nav-link" id="btnStudent">
-        <a>Student</a>
+        <router-link to="/about">About</router-link> |
       </div>
       <div class="nav-link" id="btnAccount">
-        <a>Account</a>
+        <router-link to="/student">Stuents</router-link> |
       </div>
       <div class="nav-link" id="btnEmployee">
-        <a>Employee</a>
+        <router-link to="/employee">Employee</router-link> |
+      
       </div>
       <div class="nav-link" id="btnExamsAndScores">
-        <a>Exams and Scores</a>
+        <router-link to="/account">Account</router-link> |
+      
       </div>
       <div class="nav-link" id="btnLibrary">
-        <a>Library</a>
+        <router-link to="/exams_score">Exams and Scores</router-link> |
+      
       </div>
       <div class="nav-link" id="btnHostel">
-        <a>Hostel</a>
+        <router-link to="/library">Library</router-link> |
+      
       </div>
       <div class="nav-link" id="btntransportation">
         <a>Transportation</a>
       </div>
       <div class="nav-link" id="btnAdmin">
-        <a>Admin</a>
+        <router-link to="/admin">Admin</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import router from '../router.js'
 export default {
   name: 'HomeComponent',
   props: {

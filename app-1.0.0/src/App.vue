@@ -2,13 +2,6 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/student">Stuents</router-link> |
-      <router-link to="/employee">Employee</router-link> |
-      <router-link to="/account">Account</router-link> |
-      <router-link to="/exams_score">Exams and Scores</router-link> |
-      <router-link to="/library">Library</router-link> |
-      <router-link to="/admin">Admin</router-link>
     </div>
     <router-view/>
   </div>
