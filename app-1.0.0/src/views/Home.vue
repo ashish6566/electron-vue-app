@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <HomeComponent msg="Shanti Academy"/>
-    <h1>{{ msg }}</h1>
     <p>
       Lets you perform the School Management
       <br/>more conveniently
