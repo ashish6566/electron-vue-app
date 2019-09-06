@@ -44,17 +44,17 @@ export default new Router({
     {
       path: '/library',
       name: 'library',
-      component: () => import(/* webpackChunkName: "student" */ './views/Library.vue')
+      component: () => import('./views/Library.vue')
     },
     {
       path: '/admin',
       name: 'admin',
-      component: () => import(/* webpackChunkName: "student" */ './views/Admin.vue')
-    }//,
-    // {
-    //   path: '/student',
-    //   name: 'student',
-    //   component: () => import(/* webpackChunkName: "student" */ './views/Student.vue')
-    // }
+      component: () => import('./views/Admin.vue')
+    },
+    {
+      path: '/transportation',
+      name: 'transportation',
+      component: () => import('./views/Transportation.vue')
+    }
   ]
 })
