@@ -2,9 +2,11 @@
   <div id="app">
     <div class="controlbar">
       <div class="controls">
-        <button>_</button>
+        <button class="btnControl">_</button>
       </div>
-      <div class="controls"><button>X</button></div>
+      <div class="controls">
+        <button class="btnControl">X</button>
+      </div>
     </div>
     <div id="nav">
       <router-link to="/">Home</router-link>
@@ -15,6 +17,7 @@
 
 <style>
 *{
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,4 +42,26 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+.controlbar{
+  width: 100%;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  height: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* .controls{
+  
+} */
+button{
+  border: none;
+}
+.btnControl{
+  height: 100%;
+  width: 30px;
+}
+#btnClose:hover{
+  background-color: red;
+}
+
 </style>
