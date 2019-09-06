@@ -14,19 +14,15 @@
       </div>
       <div class="nav-link" id="btnEmployee">
         <router-link to="/employee">Employee</router-link>
-      
       </div>
       <div class="nav-link" id="btnExamsAndScores">
         <router-link to="/account">Account</router-link>
-      
       </div>
       <div class="nav-link" id="btnLibrary">
-        <router-link to="/exams_score">Exams and Scores</router-link> |
-      
+        <router-link to="/exams_score">Exams and Scores</router-link>
       </div>
       <div class="nav-link" id="btnHostel">
         <router-link to="/library">Library</router-link>
-      
       </div>
       <div class="nav-link" id="btntransportation">
         <router-link to="/transportation">Transportation</router-link>
