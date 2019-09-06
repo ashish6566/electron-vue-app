@@ -1,19 +1,32 @@
 const mysql = require('mysql');
+
+
 var con = mysql.createConnection({
     host: "localhost",
     user: "dbUser",
     password: "dbPassword"
   });
   
-  function createDatabase(dbname){
-    con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        con.query("CREATE DATABASE mydb", function (err, result) {
+class CreateDatabase{
+    constructor(dbName){
+        this.databaseName = dbName;
+    }
+    initialize(){
+        return "CREATE DATABASE " + this.databaseName;
+    }
+
+    execute(){
+        con.connect(function(err) {
             if (err) throw err;
-            console.log("Database created");
-          });
-  }
+            console.log("Connected!");
+            con.query(this.initialize, function (err, result) {
+                if (err) throw err;
+                console.log("Database created");
+            });
+        });
+    }
+}
+
   
 
-  });
+  
