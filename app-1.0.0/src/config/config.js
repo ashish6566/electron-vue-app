@@ -11,10 +11,8 @@ class CreateDatabase{
     constructor(dbName){
         this.databaseName = dbName;
     }
-    initialize(){
-        return "CREATE DATABASE " + this.databaseName;
-    }
-
+    intialize(){ return "CREATE DATABASE " + this.databaseName; }
+    
     execute(){
         con.connect(function(err) {
             if (err) throw err;
