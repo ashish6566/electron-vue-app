@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <div class="controlbar">
+      <div class="controls">
+        <button>_</button>
+      </div>
+      <div class="controls"><button>X</button></div>
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link>
     </div>
@@ -22,7 +28,7 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
+  padding: 10px;
 }
 
 #nav a {
