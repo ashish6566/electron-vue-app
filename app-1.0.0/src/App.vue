@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
+    
     </div>
     <router-view/>
   </div>
@@ -13,24 +13,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
 #app {
-  background-color: aliceblue;
+  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   height: 100vh;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  color: #fff;
+  height: 100vh;
 }
 </style>
