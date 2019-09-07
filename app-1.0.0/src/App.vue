@@ -8,9 +8,7 @@
         <button class="btnControl">X</button>
       </div>
     </div>
-    <div id="nav">
     
-    </div>
     <router-view/>
   </div>
 </template>

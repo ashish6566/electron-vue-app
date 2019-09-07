@@ -49,7 +49,7 @@ export default {
  
 }
 .container{
-  display: flex;;
+  display: flex;
   text-align: center;
   flex-direction: column;
   width:80%;
@@ -67,7 +67,6 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .head-title h2{
@@ -80,8 +79,6 @@ a{
   grid-template-columns: auto auto auto;
   grid-template-rows:100px 100px 100px;
   align-items: center;
-
-  
 }
 
 
