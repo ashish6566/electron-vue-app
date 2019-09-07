@@ -1,5 +1,13 @@
 <template>
   <div id="app">
+    <div class="controlbar">
+      <div class="controls">
+        <button class="btnControl">_</button>
+      </div>
+      <div class="controls">
+        <button class="btnControl">X</button>
+      </div>
+    </div>
     <div id="nav">
     
     </div>
@@ -9,6 +17,7 @@
 
 <style>
 *{
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,4 +33,26 @@
   color: #fff;
   height: 100vh;
 }
+.controlbar{
+  width: 100%;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  height: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* .controls{
+  
+} */
+button{
+  border: none;
+}
+.btnControl{
+  height: 100%;
+  width: 30px;
+}
+#btnClose:hover{
+  background-color: red;
+}
+
 </style>
