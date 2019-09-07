@@ -1,11 +1,11 @@
 <template>
-  <div class="homenav">
-    <router-link to="/" id="homelink">Home</router-link>
+  <div class="app">
+    <router-link to="/" id="homelink">&lt;-- Home</router-link>
   </div>
 </template>
 
 <script>
-import router from '../router.js'
+import router from '@/router.js'
 export default {
   name: 'Homenav'
 }

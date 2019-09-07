@@ -2,17 +2,22 @@
   <div id="app">
     <div class="controlbar">
       <div class="controls">
-        <button class="btnControl">_</button>
+        <button class="btnControl" id="btnMin">_</button>
       </div>
       <div class="controls">
-        <button class="btnControl">X</button>
+        <button class="btnControl" id="btnClose">x</button>
       </div>
     </div>
-    
     <router-view/>
+    <div class="about-link" id="btnAbout">
+      <router-link to="/about">About</router-link>
+    </div>
   </div>
 </template>
+<script>
 
+  //import router from '@/router.js'
+</script>
 <style>
 *{
   font-size: 1rem;
@@ -48,9 +53,17 @@ button{
 .btnControl{
   height: 100%;
   width: 30px;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+}
+#btnMin:hover{
+  background-color: grey;
+  color: white;
 }
 #btnClose:hover{
   background-color: red;
+  color: white;
 }
 
 </style>
