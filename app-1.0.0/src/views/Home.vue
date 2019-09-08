@@ -2,12 +2,11 @@
   <div class="home">
     <div class="container">
       <div class="head-title">
-        <h2>Shanti Academy</h2>
+        <h2>Name of Organization<!-- require a component to display name as required--></h2>
       </div>
         <div class="grid-dashboards">
           <div class="nav-link" id="rlAccount">
             <router-link to="/student">Students</router-link>
-              <p></p>
           </div>
           <div class="nav-link" id="rlEmployee">
             <router-link to="/employee">Employee</router-link>

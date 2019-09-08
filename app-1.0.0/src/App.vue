@@ -2,19 +2,22 @@
   <div id="app">
     <div class="controlbar">
       <div class="controls">
-        <button class="btnControl" id="btnMin">_</button>
+        <button class="btnControl">
+          <router-link to="/about" class="router-link" id="rlHome">&#8505;</router-link>
+        </button>
       </div>
       <div class="controls">
-        <button class="btnControl" id="btnClose">x</button>
+          <button class="btnControl" id="btnMin">&#9866;</button>
+      </div>
+      <div class="controls">
+        <button class="btnControl" id="btnClose">&#9747;</button>
       </div>
     </div>
     <router-view/>
     <div class="footer">
-      <div class="routerlink">
-        <router-link to="/">Home</router-link>
-      </div>
-      <div class="routerlink">
-        <router-link to="/about">About</router-link>
+      
+      <div class="router-link">
+        <router-link to="/">&#9776;</router-link>
       </div>
     </div>
   </div>
@@ -27,8 +30,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 #app {
   background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   height: 100vh;
@@ -49,23 +50,22 @@
 /* .controls{
   
 } */
-button{
+button {
   border: none;
 }
 .btnControl{
-  height: 100%;
-  width: 30px;
-  background-color: transparent;
-  color: black;
   font-weight: bold;
+  color: whitesmoke;
+  height: 100%;
+  width: 35px;
+  background-color: transparent;
 }
+
 #btnMin:hover{
   background-color: grey;
-  color: white;
 }
 #btnClose:hover{
   background-color: red;
-  color: white;
 }
 .footer{
   width: 100%;
@@ -76,5 +76,6 @@ button{
 }
 .routerlink{
   padding: 0 10px;
+  font-size: 0px;
 }
 </style>
