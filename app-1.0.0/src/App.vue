@@ -9,15 +9,17 @@
       </div>
     </div>
     <router-view/>
-    <div class="about-link" id="btnAbout">
-      <router-link to="/about">About</router-link>
+    <div class="footer">
+      <div class="routerlink">
+        <router-link to="/">Home</router-link>
+      </div>
+      <div class="routerlink">
+        <router-link to="/about">About</router-link>
+      </div>
     </div>
   </div>
 </template>
-<script>
 
-  //import router from '@/router.js'
-</script>
 <style>
 *{
   font-size: 1rem;
@@ -65,5 +67,14 @@ button{
   background-color: red;
   color: white;
 }
-
+.footer{
+  width: 100%;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+}
+.routerlink{
+  padding: 0 10px;
+}
 </style>

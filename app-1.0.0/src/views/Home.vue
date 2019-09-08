@@ -5,30 +5,28 @@
         <h2>Shanti Academy</h2>
       </div>
         <div class="grid-dashboards">
-             <div class="nav-link" id="btnStudent">
-               <router-link to="/about">About</router-link>
-             </div>
-             <div class="nav-link" id="btnAccount">
-               <router-link to="/student">Students</router-link>
-             </div>
-             <div class="nav-link" id="btnEmployee">
-               <router-link to="/employee">Employee</router-link>
-             </div>
-             <div class="nav-link" id="btnExamsAndScores">
-               <router-link to="/account">Account</router-link>
-             </div>
-             <div class="nav-link" id="btnLibrary">
-               <router-link to="/exams_score">Exams and Scores</router-link> 
-             </div>
-             <div class="nav-link" id="btnHostel">
-               <router-link to="/library">Library</router-link>
-             </div>
-             <div class="nav-link" id="btntransportation">
-               <router-link to="/transportation">Transportation</router-link>
-             </div>
-             <div class="nav-link" id="btnAdmin">
-               <router-link to="/admin">Admin</router-link>
-             </div>
+          <div class="nav-link" id="rlAccount">
+            <router-link to="/student">Students</router-link>
+              <p></p>
+          </div>
+          <div class="nav-link" id="rlEmployee">
+            <router-link to="/employee">Employee</router-link>
+          </div>
+          <div class="nav-link" id="rlExamsAndScores">
+            <router-link to="/account">Account</router-link>
+          </div>
+          <div class="nav-link" id="rlLibrary">
+            <router-link to="/exams_score">Exams and Scores</router-link> 
+          </div>
+          <div class="nav-link" id="rlHostel">
+            <router-link to="/library">Library</router-link>
+          </div>
+          <div class="nav-link" id="rltransportation">
+            <router-link to="/transportation">Transportation</router-link>
+          </div>
+          <div class="nav-link" id="rlAdmin">
+            <router-link to="/admin">Admin</router-link>
+          </div>
         </div><!--End of grid-dashboard-->
     </div><!--End of container-->
   </div><!--End of Home-->
@@ -36,7 +34,7 @@
 
 <script>
 // @ is an alias to /src
-import router from '../router.js'
+import router from '@/router.js'
 
 export default {
   name: 'home'
