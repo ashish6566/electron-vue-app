@@ -2,8 +2,8 @@
   <div id="app">
     <div class="controlbar">
       <div class="controls">
-        <button class="btnControl">
-          <router-link to="/about" class="router-link" id="rlHome">&#8505;</router-link>
+        <button class="btnControl" id="btnAbout">
+          <router-link to="/about" id="rlHome">&#8505;</router-link>
         </button>
       </div>
       <div class="controls">
@@ -14,12 +14,6 @@
       </div>
     </div>
     <router-view/>
-    <div class="footer">
-      
-      <div class="router-link">
-        <router-link to="/">&#9776;</router-link>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -60,7 +54,9 @@ button {
   width: 35px;
   background-color: transparent;
 }
-
+#btnAbout{
+  margin-right: 5px;
+}
 #btnMin:hover{
   background-color: grey;
 }
@@ -69,13 +65,10 @@ button {
 }
 .footer{
   width: 100%;
-  padding: 10px 20px;
+  height: 25px;
   position: absolute;
   bottom: 0px;
-  display: flex;
 }
-.routerlink{
-  padding: 0 10px;
-  font-size: 0px;
-}
+
+
 </style>

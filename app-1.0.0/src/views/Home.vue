@@ -33,7 +33,7 @@
 
 <script>
 // @ is an alias to /src
-import router from '@/router.js'
+//import router from '@/router.js'
 
 export default {
   name: 'home'
