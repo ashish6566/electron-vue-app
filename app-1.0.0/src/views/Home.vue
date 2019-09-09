@@ -43,7 +43,6 @@ export default {
 <style>
 .home{
   padding-top: 50px;
- 
 }
 .container{
   display: flex;
@@ -52,12 +51,10 @@ export default {
   width:80%;
   margin: 0 auto;
 }
-
 a{
   text-decoration: none;
     color: #fff;
 }
-
 /* .head-title */
 .head-title{
   height: 130px;

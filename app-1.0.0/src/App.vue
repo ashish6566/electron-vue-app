@@ -69,6 +69,25 @@ button {
   position: absolute;
   bottom: 0px;
 }
-
+.about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
+  height: 100%;
+}
+.left-sidebar{
+  width: 20%;
+  height: 100%;
+  padding-left: 10px;
+  /* display: flex; */ 
+}
+#back-home{
+  display: inline-block;
+  height: 25px;
+  margin-bottom: 8px;
+}
+hr{
+  background:white; 
+}
+.page-title{
+  padding: 10px 0px;
+}
 
 </style>
