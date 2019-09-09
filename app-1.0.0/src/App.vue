@@ -4,14 +4,16 @@
   <div id="app">
     <div class="controlbar">
       <div class="controls">
-        <button class="btnControl">_</button>
+        <button class="btnControl" id="btnAbout">
+          <router-link to="/about" id="rlHome">&#8505;</router-link>
+        </button>
       </div>
       <div class="controls">
-        <button class="btnControl">X</button>
+          <button class="btnControl" id="btnMin">&#9866;</button>
       </div>
-    </div>
-    <div id="nav">
-    
+      <div class="controls">
+        <button class="btnControl" id="btnClose">&#9747;</button>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -24,8 +26,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
 #app {
   background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   height: 100vh;
@@ -50,8 +50,17 @@ button{
 }
 
 .btnControl{
+  font-weight: bold;
+  color: whitesmoke;
   height: 100%;
-  width: 30px;
+  width: 35px;
+  background-color: transparent;
+}
+#btnAbout{
+  margin-right: 5px;
+}
+#btnMin:hover{
+  background-color: grey;
 }
 
 #btnClose:hover{

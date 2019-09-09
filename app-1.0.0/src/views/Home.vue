@@ -3,31 +3,30 @@
   <div class="home">
     <div class="container">
       <div class="head-title">
-        <h2>Shanti Academy</h2>
+        <h2>Name of Organization<!-- require a component to display name as required--></h2>
       </div>
         <div class="grid-dashboards">
-             <div class="nav-link" id="btnStudents">
-               <font-awesome-icon icon="spinner" />
-               <router-link to="/student">Students</router-link>
-             </div>
-             <div class="nav-link" id="btnEmployee">
-               <router-link to="/employee">Employee</router-link>
-             </div>
-             <div class="nav-link" id="Account">
-               <router-link class="route" to="/account">Account</router-link>
-             </div>
-             <div class="nav-link" id="btnExamScores">
-               <router-link to="/exams_score">Exams & Scores</router-link> 
-             </div>
-             <div class="nav-link" id="btnLibrary">
-               <router-link to="/library">Library</router-link>
-             </div>
-             <div class="nav-link" id="btnTransportation">
-               <router-link to="/transportation">Transportation</router-link>
-             </div>
-             <div class="nav-link" id="btnAdmin">
-               <router-link to="/admin">Admin</router-link>
-             </div>
+          <div class="nav-link" id="rlAccount">
+            <router-link to="/student">Students</router-link>
+          </div>
+          <div class="nav-link" id="rlEmployee">
+            <router-link to="/employee">Employee</router-link>
+          </div>
+          <div class="nav-link" id="rlExamsAndScores">
+            <router-link to="/account">Account</router-link>
+          </div>
+          <div class="nav-link" id="rlLibrary">
+            <router-link to="/exams_score">Exams and Scores</router-link> 
+          </div>
+          <div class="nav-link" id="rlHostel">
+            <router-link to="/library">Library</router-link>
+          </div>
+          <div class="nav-link" id="rltransportation">
+            <router-link to="/transportation">Transportation</router-link>
+          </div>
+          <div class="nav-link" id="rlAdmin">
+            <router-link to="/admin">Admin</router-link>
+          </div>
         </div><!--End of grid-dashboard-->
         <div class="footer-options">
           <ul>
@@ -41,7 +40,7 @@
 
 <script>
 // @ is an alias to /src
-import router from '../router.js'
+//import router from '@/router.js'
 
 export default {
   name: 'home'
@@ -52,29 +51,24 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 .home{
   padding-top: 50px;
-  font-family: 'Roboto', sans-serif;
- 
 }
 .container{
-  display: flex;;
+  display: flex;
   text-align: center;
   flex-direction: column;
   width:80%;
   margin: 0 auto;
 }
-
 a{
   text-decoration: none;
     color: #fff;
 }
-
 /* .head-title */
 .head-title{
   height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .head-title h2{
