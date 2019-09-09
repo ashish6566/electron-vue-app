@@ -1,4 +1,6 @@
+
 <template>
+
   <div id="app">
     <div class="controlbar">
       <div class="controls">
@@ -33,6 +35,7 @@
   color: #fff;
   height: 100vh;
 }
+
 .controlbar{
   width: 100%;
   -webkit-app-region: drag;
@@ -41,18 +44,17 @@
   display: flex;
   justify-content: flex-end;
 }
-/* .controls{
-  
-} */
+
 button{
   border: none;
 }
+
 .btnControl{
   height: 100%;
   width: 30px;
 }
+
 #btnClose:hover{
   background-color: red;
 }
-
 </style>

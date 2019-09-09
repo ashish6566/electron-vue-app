@@ -1,35 +1,40 @@
 <template>
+
   <div class="home">
     <div class="container">
       <div class="head-title">
         <h2>Shanti Academy</h2>
       </div>
         <div class="grid-dashboards">
-             <div class="nav-link" id="btnStudent">
-               <router-link to="/about">About</router-link>
-             </div>
-             <div class="nav-link" id="btnAccount">
+             <div class="nav-link" id="btnStudents">
+               <font-awesome-icon icon="spinner" />
                <router-link to="/student">Students</router-link>
              </div>
              <div class="nav-link" id="btnEmployee">
                <router-link to="/employee">Employee</router-link>
              </div>
-             <div class="nav-link" id="btnExamsAndScores">
-               <router-link to="/account">Account</router-link>
+             <div class="nav-link" id="Account">
+               <router-link class="route" to="/account">Account</router-link>
+             </div>
+             <div class="nav-link" id="btnExamScores">
+               <router-link to="/exams_score">Exams & Scores</router-link> 
              </div>
              <div class="nav-link" id="btnLibrary">
-               <router-link to="/exams_score">Exams and Scores</router-link> 
-             </div>
-             <div class="nav-link" id="btnHostel">
                <router-link to="/library">Library</router-link>
              </div>
-             <div class="nav-link" id="btntransportation">
+             <div class="nav-link" id="btnTransportation">
                <router-link to="/transportation">Transportation</router-link>
              </div>
              <div class="nav-link" id="btnAdmin">
                <router-link to="/admin">Admin</router-link>
              </div>
         </div><!--End of grid-dashboard-->
+        <div class="footer-options">
+          <ul>
+            <li><p>About</p></li>
+            <li><p>Setting</p></li>
+          </ul>
+        </div>
     </div><!--End of container-->
   </div><!--End of Home-->
 </template>
@@ -44,8 +49,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 .home{
   padding-top: 50px;
+  font-family: 'Roboto', sans-serif;
  
 }
 .container{
@@ -77,11 +84,46 @@ a{
 /* .grid-dashboards */
 .grid-dashboards{
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 30% 30% 30%;
   grid-template-rows:100px 100px 100px;
+ 
+  margin-bottom: 50px;
+  grid-gap:10px;
+}
+
+.grid-dashboards .nav-link{
+   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-size: 30px;
+}
+
 
   
+ 
+
+
+
+ 
+
+
+.grid-dashboards .nav-link:hover{
+    border: #fff solid 1px;
+}
+
+/* .footer-options */
+.footer-options{
+
+}
+
+.footer-options ul{
+  list-style: none;
+  display: flex;
+}
+
+.footer-options li{
+  padding-right: 30px;
 }
 
 
