@@ -7,32 +7,58 @@
       </div>
         <div class="grid-dashboards">
           <div class="nav-link" id="rlAccount">
-            <i class="fas fa-user-graduate"></i>
-            <router-link to="/student">Students</router-link>
+            <div class="nav-icon">
+               <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="nav-label">
+              <router-link to="/student">Students</router-link>
+            </div>
           </div>
           <div class="nav-link" id="rlEmployee">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <router-link to="/employee">Employee</router-link>
+            <div class="nav-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="nav-label">
+             <router-link to="/employee">Employee</router-link>
+            </div>
           </div>
           <div class="nav-link" id="rlExamsAndScores">
-            <i class="fas fa-money-check-alt"></i>
-            <router-link to="/account">Account</router-link>
+            <div class="nav-icon">
+              <i class="fas fa-money-check-alt"></i>
+            </div>
+             <div class="nav-label">
+              <router-link to="/account">Account</router-link>
+             </div>
           </div>
           <div class="nav-link" id="rlLibrary">
-            <i class="fas fa-book"></i>
+            <div class="nav-icon">
+             <i class="fas fa-book"></i>
+            </div>
             <router-link to="/exams_score">Exams &amp; Scores</router-link> 
           </div>
           <div class="nav-link" id="rlHostel">
-            <i class="fas fa-hotel"></i>
-            <router-link to="/library">Library</router-link>
+            <div class="nav-icon">
+             <i class="fas fa-hotel"></i>
+            </div>
+            <div class="nav-label">
+              <router-link to="/library">Library</router-link>
+            </div>
           </div>
           <div class="nav-link" id="rltransportation">
-            <i class="fas fa-bus"></i>
-            <router-link to="/transportation">Transportation</router-link>
+            <div class="nav-icon">
+             <i class="fas fa-bus"></i>
+            </div>
+            <div class="nav-label">
+             <router-link to="/transportation">Transportation</router-link>
+            </div>
           </div>
           <div class="nav-link" id="rlAdmin">
-            <i class="fas fa-users-cog"></i>
-            <router-link to="/admin">Admin</router-link>
+            <div class="nav-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <div class="nav-label">
+              <router-link to="/admin">Admin</router-link>
+            </div>    
           </div>
         </div><!--End of grid-dashboard-->
         <div class="footer-options">
@@ -95,7 +121,7 @@ a{
 .grid-dashboards .nav-link{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding-right: 20px;
   font-size: 30px;
 }
