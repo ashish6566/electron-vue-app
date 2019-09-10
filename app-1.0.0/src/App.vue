@@ -3,16 +3,18 @@
 
   <div id="app">
     <div class="controlbar">
-      <div class="controls">
-        <button class="btnControl" id="btnAbout">
-          <router-link to="/about" id="rlHome">&#8505;</router-link>
-        </button>
-      </div>
-      <div class="controls">
-          <button class="btnControl" id="btnMin">&#9866;</button>
-      </div>
-      <div class="controls">
-        <button class="btnControl" id="btnClose">&#9747;</button>
+      <div class="window-control">  
+        <div class="controls">
+          <button class="btnControl" id="btnAbout">
+            <router-link to="/about" id="rlHome">&#8505;</router-link>
+          </button>
+        </div>
+        <div class="controls">
+            <button class="btnControl" id="btnMin" v-on:click="minimize">&#9866;</button>
+        </div>
+        <div class="controls">
+          <button class="btnControl" id="btnClose" v-on:click="close">&#9747;</button>
+        </div>
       </div>
     </div>
     <router-view/>
@@ -39,10 +41,14 @@
 .controlbar{
   width: 100%;
   -webkit-app-region: drag;
-  -webkit-user-select: none;
   height: 25px;
+}
+.window-control{
+  position: absolute;
+  right: 0px;
   display: flex;
-  justify-content: flex-end;
+  -webkit-app-region: no-drag;
+  height: 25px;
 }
 
 button{
@@ -66,4 +72,39 @@ button{
 #btnClose:hover{
   background-color: red;
 }
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.left-sidebar #back-home a{
+  color: #000;
+}
+.footer{
+  width: 100%;
+  height: 25px;
+  position: absolute;
+  bottom: 0px;
+}
+.about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
+  height: 100%;
+  background: aliceblue;
+  color: #3a3d40;
+}
+.left-sidebar{
+  width: 20%;
+  height: 100%;
+  padding-left: 10px;
+}
+#back-home{
+  width: 100%;
+  display: block;
+  padding: 10px 0;
+}
+hr{
+  background:white; 
+}
+.page-title{
+  padding: 10px 0px;
+}
+
 </style>
