@@ -67,15 +67,14 @@
             <div class="nav-label">
                 <router-link to="/admin">Admin</router-link>
             </div>    
-          </div>
-
+          </div>        
         </div><!--End of grid-dashboard-->
-        <div class="footer-options">
-          <ul>
-            <li><i class="fas fa-cogs"></i></li>
-            <li><p>Setting</p></li><!--router-link required-->
-          </ul>
-        </div>
+           <div class="footer-options">
+             <ul>
+                <li><i class="fas fa-cogs"></i></li>
+                <li><p>Setting</p></li><!--router-link required-->
+              </ul>
+           </div>
     </div><!--End of container-->
   </div><!--End of Home-->
 </template>
@@ -121,28 +120,37 @@ a{
 /* .grid-dashboards */
 .grid-dashboards{
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 34% 33.33% 33.33%;
   grid-template-rows:100px 100px 100px;
   margin-bottom: 50px;
-  grid-gap:10px;
+  grid-gap:14px;
 }
 
 .grid-dashboards .nav-link{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content:left;
   padding-right: 20px;
   font-size: 30px;
 }
 
+.grid-dashboards .nav-link .nav-icon{
+    margin-right: 70px;
+    margin-left: 30px;
+}
 
-  
- 
+.grid-dashboards .nav-link:nth-child(3) .nav-icon, /*for account icon and transportation icon*/
+.grid-dashboards .nav-link:nth-child(6) .nav-icon{
+  margin-right: 60px;
+}
 
+.grid-dashboards .nav-link .nav-icon svg{
+  font-size: 40px;
+}
 
-
- 
-
+.grid-dashboards .nav-link .nav-label a{
+  font-size: 22px;
+}
 
 .grid-dashboards .nav-link:hover{
     border: #fff solid 1px;

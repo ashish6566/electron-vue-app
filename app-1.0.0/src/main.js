@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-const {BrowserWindow} = require('electron').remote
+// const {BrowserWindow} = require('electron').remote
 
 import { dom } from '@fortawesome/fontawesome-svg-core'
 dom.watch();
