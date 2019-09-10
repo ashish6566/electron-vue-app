@@ -51,9 +51,9 @@ export default {
   width:80%;
   margin: 0 auto;
 }
-a{
+.grid-dashboards a{
   text-decoration: none;
-    color: #fff;
+  color: #fff;
 }
 /* .head-title */
 .head-title{

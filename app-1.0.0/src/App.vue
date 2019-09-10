@@ -33,6 +33,14 @@
   color: #fff;
   height: 100vh;
 }
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.left-sidebar #back-home a{
+  color: #000;
+}
+
 .controlbar{
   width: 100%;
   -webkit-app-region: drag;
@@ -41,9 +49,7 @@
   display: flex;
   justify-content: flex-end;
 }
-/* .controls{
-  
-} */
+
 button {
   border: none;
 }

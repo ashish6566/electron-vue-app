@@ -18,5 +18,8 @@ export default {
 </script>
 
 <style scoped>
+.student .left-sidebar #back-home a{
+  color: #000;
+}
 
 </style>
