@@ -63,6 +63,7 @@ button {
 #btnClose:hover{
   background-color: red;
 }
+
 .footer{
   width: 100%;
   height: 25px;
@@ -71,6 +72,8 @@ button {
 }
 .about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
   height: 100%;
+  background: aliceblue;
+  color: #3a3d40;
 }
 .left-sidebar{
   width: 20%;
@@ -79,9 +82,9 @@ button {
   /* display: flex; */ 
 }
 #back-home{
-  display: inline-block;
-  height: 25px;
-  margin-bottom: 8px;
+  width: 100%;
+  display: block;
+  padding: 10px 0;
 }
 hr{
   background:white; 
