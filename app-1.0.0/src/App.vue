@@ -33,15 +33,7 @@
   color: #fff;
   height: 100vh;
 }
-a{
-  text-decoration: none;
-  color: #fff;
-}
-.left-sidebar #back-home a{
-  color: #000;
-}
-
-.controlbar{
+#app .controlbar{
   width: 100%;
   -webkit-app-region: drag;
   -webkit-user-select: none;
@@ -49,7 +41,13 @@ a{
   display: flex;
   justify-content: flex-end;
 }
-
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.left-sidebar #back-home a{
+  color: #000;
+}
 button {
   border: none;
 }
