@@ -23,6 +23,7 @@ function createWindow () {
     minHeight: 600,
     maxWidth: 1680,
     maxHeight: 900,
+    frame: false,
     webPreferences: {
     nodeIntegration: true
     }

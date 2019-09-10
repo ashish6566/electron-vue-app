@@ -7,10 +7,10 @@
         </button>
       </div>
       <div class="controls">
-          <button class="btnControl" id="btnMin">&#9866;</button>
+          <button class="btnControl" id="btnMin" v-on:click="minimize">&#9866;</button>
       </div>
       <div class="controls">
-        <button class="btnControl" id="btnClose">&#9747;</button>
+        <button class="btnControl" id="btnClose" v-on:click="close">&#9747;</button>
       </div>
     </div>
     <router-view/>
@@ -33,20 +33,16 @@
   color: #fff;
   height: 100vh;
 }
-#app .controlbar{
+.controlbar{
   width: 100%;
   -webkit-app-region: drag;
-  -webkit-user-select: none;
   height: 25px;
   display: flex;
   justify-content: flex-end;
 }
-a{
-  text-decoration: none;
-  color: #fff;
-}
-.left-sidebar #back-home a{
-  color: #000;
+.controls{
+  -webkit-app-region: no-drag;
+  -webkit-user-select: none;
 }
 button {
   border: none;
@@ -67,7 +63,13 @@ button {
 #btnClose:hover{
   background-color: red;
 }
-
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.left-sidebar #back-home a{
+  color: #000;
+}
 .footer{
   width: 100%;
   height: 25px;
@@ -83,7 +85,6 @@ button {
   width: 20%;
   height: 100%;
   padding-left: 10px;
-  /* display: flex; */ 
 }
 #back-home{
   width: 100%;
