@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <div class="controlbar">
-      <div class="controls">
-        <button class="btnControl" id="btnAbout">
-          <router-link to="/about" id="rlHome">&#8505;</router-link>
-        </button>
-      </div>
-      <div class="controls">
-          <button class="btnControl" id="btnMin" v-on:click="minimize">&#9866;</button>
-      </div>
-      <div class="controls">
-        <button class="btnControl" id="btnClose" v-on:click="close">&#9747;</button>
+      <div class="window-control">  
+        <div class="controls">
+          <button class="btnControl" id="btnAbout">
+            <router-link to="/about" id="rlHome">&#8505;</router-link>
+          </button>
+        </div>
+        <div class="controls">
+            <button class="btnControl" id="btnMin" v-on:click="minimize">&#9866;</button>
+        </div>
+        <div class="controls">
+          <button class="btnControl" id="btnClose" v-on:click="close">&#9747;</button>
+        </div>
       </div>
     </div>
     <router-view/>
@@ -37,12 +39,13 @@
   width: 100%;
   -webkit-app-region: drag;
   height: 25px;
-  display: flex;
-  justify-content: flex-end;
 }
-.controls{
+.window-control{
+  position: absolute;
+  right: 0px;
+  display: flex;
   -webkit-app-region: no-drag;
-  -webkit-user-select: none;
+  height: 25px;
 }
 button {
   border: none;
