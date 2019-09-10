@@ -62,6 +62,14 @@
           </div>
         </div><!--End of grid-dashboard-->
         <div class="footer-options">
+          <!--Footer option lai container bhanda baira rakh ani balla 
+          bottom left corner ma janxa...
+          aru tarikale gare ni hunxa tero afnai tarikale...
+          ani Setting bhanera name narakhne just icon mara rakhne oe...
+          
+          
+          
+          -->
           <ul>
             <li><i class="fas fa-cogs"></i></li>
             <li><p>Setting</p></li><!--router-link required-->
@@ -83,6 +91,7 @@ export default {
 <style>
 .home{
   padding-top: 50px;
+  height: 100%;
 }
 .container{
   display: flex;
@@ -126,23 +135,14 @@ a{
   font-size: 30px;
 }
 
-
-  
- 
-
-
-
- 
-
-
 .grid-dashboards .nav-link:hover{
     border: #fff solid 1px;
 }
 
 /* .footer-options */
-.footer-options{
+/* .footer-options{
 
-}
+} */
 
 .footer-options ul{
   list-style: none;
