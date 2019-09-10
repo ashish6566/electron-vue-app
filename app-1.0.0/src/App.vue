@@ -1,6 +1,4 @@
-
 <template>
-
   <div id="app">
     <div class="controlbar">
       <div class="window-control">  

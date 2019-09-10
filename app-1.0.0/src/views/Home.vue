@@ -69,13 +69,13 @@
             </div>    
           </div>        
         </div><!--End of grid-dashboard-->
-           <div class="footer-options">
-             <ul>
-                <li><i class="fas fa-cogs"></i></li>
-                <li><p>Setting</p></li><!--router-link required-->
-              </ul>
-           </div>
     </div><!--End of container-->
+      <div class="footer-options">
+        <ul>
+           <li><i class="fas fa-cogs"></i></li>
+           <li><p>Setting</p></li><!--router-link required-->
+         </ul>
+      </div>
   </div><!--End of Home-->
 </template>
 
@@ -91,6 +91,7 @@ export default {
 <style>
 .home{
   padding-top: 50px;
+  height: 100%;
 }
 .container{
   display: flex;

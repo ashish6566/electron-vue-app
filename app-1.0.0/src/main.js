@@ -14,23 +14,23 @@ import {
 
 library.add( faUserGraduate, faMoneyCheckAlt, faBook, faHotel, faBus, faUsersCog, faChalkboardTeacher, faCogs);
 
-  Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
-  methods: {
-    minimize: function(event){
-      var window = BrowserWindow.getFocusedWindow();
-      window.minimize();
-    },
-    close: function(event){
-      var window = BrowserWindow.getFocusedWindow();
-      window.close();
-    }
-  },
+  // methods: {
+  //   minimize: function(event){
+  //     var window = BrowserWindow.getFocusedWindow();
+  //     window.minimize();
+  //   },
+  //   close: function(event){
+  //     var window = BrowserWindow.getFocusedWindow();
+  //     window.close();
+  //   }
+  // },
   render: h => h(App)
 }).$mount('#app')
 
