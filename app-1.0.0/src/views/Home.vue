@@ -14,52 +14,61 @@
               <router-link to="/student">Students</router-link>
             </div>
           </div>
+
           <div class="nav-link" id="rlEmployee">
             <div class="nav-icon">
-              <i class="fas fa-chalkboard-teacher"></i>
+               <i class="fas fa-chalkboard-teacher"></i>
             </div>
             <div class="nav-label">
-             <router-link to="/employee">Employee</router-link>
+               <router-link to="/employee">Employee</router-link>
             </div>
           </div>
+
           <div class="nav-link" id="rlExamsAndScores">
             <div class="nav-icon">
-              <i class="fas fa-money-check-alt"></i>
+               <i class="fas fa-money-check-alt"></i>
             </div>
              <div class="nav-label">
-              <router-link to="/account">Account</router-link>
+                <router-link to="/account">Account</router-link>
              </div>
           </div>
+
           <div class="nav-link" id="rlLibrary">
             <div class="nav-icon">
-             <i class="fas fa-book"></i>
+               <i class="fas fa-book"></i>
             </div>
-            <router-link to="/exams_score">Exams &amp; Scores</router-link> 
+            <div class="nav-label">
+               <router-link to="/exams_score">Exams &amp; Scores</router-link> 
+            </div>
           </div>
+
           <div class="nav-link" id="rlHostel">
             <div class="nav-icon">
-             <i class="fas fa-hotel"></i>
+               <i class="fas fa-hotel"></i>
             </div>
             <div class="nav-label">
-              <router-link to="/library">Library</router-link>
+               <router-link to="/library">Library</router-link>
             </div>
           </div>
+
           <div class="nav-link" id="rltransportation">
             <div class="nav-icon">
-             <i class="fas fa-bus"></i>
+               <i class="fas fa-bus"></i>
             </div>
             <div class="nav-label">
-             <router-link to="/transportation">Transportation</router-link>
+               <router-link to="/transportation">Transportation</router-link>
             </div>
           </div>
+
           <div class="nav-link" id="rlAdmin">
             <div class="nav-icon">
-              <i class="fas fa-users-cog"></i>
+                <i class="fas fa-users-cog"></i>
             </div>
             <div class="nav-label">
-              <router-link to="/admin">Admin</router-link>
+                <router-link to="/admin">Admin</router-link>
             </div>    
           </div>
+
         </div><!--End of grid-dashboard-->
         <div class="footer-options">
           <ul>
@@ -140,9 +149,9 @@ a{
 }
 
 /* .footer-options */
-.footer-options{
+/* .footer-options{
 
-}
+} */
 
 .footer-options ul{
   list-style: none;

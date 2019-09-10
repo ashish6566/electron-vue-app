@@ -28,6 +28,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 #app {
   background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   height: 100vh;
@@ -43,6 +44,7 @@
   -webkit-app-region: drag;
   height: 25px;
 }
+
 .window-control{
   position: absolute;
   right: 0px;
@@ -62,9 +64,11 @@ button{
   width: 35px;
   background-color: transparent;
 }
+
 #btnAbout{
   margin-right: 5px;
 }
+
 #btnMin:hover{
   background-color: grey;
 }
@@ -72,37 +76,45 @@ button{
 #btnClose:hover{
   background-color: red;
 }
+
 a{
   text-decoration: none;
   color: #fff;
 }
+
 .left-sidebar #back-home a{
   color: #000;
 }
+
 .footer{
   width: 100%;
   height: 25px;
   position: absolute;
   bottom: 0px;
 }
+
 .about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
   height: 100%;
   background: aliceblue;
   color: #3a3d40;
 }
+
 .left-sidebar{
   width: 20%;
   height: 100%;
   padding-left: 10px;
 }
+
 #back-home{
   width: 100%;
   display: block;
   padding: 10px 0;
 }
+
 hr{
   background:white; 
 }
+
 .page-title{
   padding: 10px 0px;
 }
