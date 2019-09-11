@@ -8,8 +8,6 @@
       <h1 class="page-title">About us</h1>
       <hr>  
     </div>
-    
-    
   </div>
 </template>
 
