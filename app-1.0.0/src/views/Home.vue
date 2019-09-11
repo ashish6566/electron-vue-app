@@ -71,12 +71,12 @@
             </router-link>    
           </div>        
         </div><!--End of grid-dashboard-->
-    </div><!--End of container-->
-      <div class="footer-options">
+        <div class="footer-options">
           <div class="foot-icon">
             <i class="fas fa-cogs"></i>
           </div>
       </div>
+    </div><!--End of container-->  
   </div><!--End of Home-->
 </template>
 
