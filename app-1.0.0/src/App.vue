@@ -28,7 +28,10 @@
 }
 
 #app {
-  background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background: linear-gradient(to right, #fc4a1a, #f7b733); 
+  background: linear-gradient(to bottom, #360033, #0b8793);
+  background: linear-gradient(to bottom, #000000, #434343);
+   background: linear-gradient(to right, #000046, #1cb5e0);
   height: 100vh;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -116,5 +119,4 @@ hr{
 .page-title{
   padding: 10px 0px;
 }
-
 </style>

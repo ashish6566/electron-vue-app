@@ -1,5 +1,6 @@
 <template>
-
+<!-- npm run serve -->
+<!-- npm run electron:serve -->
   <div class="home">
     <div class="container">
       <div class="head-title">
@@ -71,10 +72,12 @@
         </div><!--End of grid-dashboard-->
     </div><!--End of container-->
       <div class="footer-options">
-        <ul>
-           <li><i class="fas fa-cogs"></i></li>
-           <li><p>Setting</p></li><!--router-link required-->
-         </ul>
+          <div class="foot-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <div class="foot-label">
+             <p>Setting</p><!--router-link required-->
+          </div> 
       </div>
   </div><!--End of Home-->
 </template>
@@ -91,7 +94,7 @@ export default {
 <style>
 .home{
   padding-top: 50px;
-  height: 100%;
+
 }
 .container{
   display: flex;
@@ -112,6 +115,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .head-title h2{
@@ -123,7 +127,7 @@ a{
   display: grid;
   grid-template-columns: 34% 33.33% 33.33%;
   grid-template-rows:100px 100px 100px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   grid-gap:14px;
 }
 
@@ -133,11 +137,14 @@ a{
   justify-content:left;
   padding-right: 20px;
   font-size: 30px;
+  box-sizing: border-box;
+
+  
 }
 
 .grid-dashboards .nav-link .nav-icon{
-    margin-right: 70px;
-    margin-left: 30px;
+     margin-right: 70px;
+     margin-left: 30px;
 }
 
 .grid-dashboards .nav-link:nth-child(3) .nav-icon, /*for account icon and transportation icon*/
@@ -154,22 +161,36 @@ a{
 }
 
 .grid-dashboards .nav-link:hover{
-    border: #fff solid 1px;
+    /* border: #fff solid 1px; */
+      /* background: linear-gradient(to bottom, #ff8008, #ffc837); */
+       border:  #ED8F03 1px  solid;
+      
+    margin: -1.1167px;
+   
+  
 }
 
 /* .footer-options */
-/* .footer-options{
-
-} */
-
-.footer-options ul{
-  list-style: none;
+.footer-options{
   display: flex;
+  width:6%;
+  margin-left:30px;
+  padding: 2px 3px;
 }
 
-.footer-options li{
-  padding-right: 30px;
+.footer-options .foot-icon{
+  padding-right: 10px;
+   color: #ED8F03;
+}
+
+.footer-options:hover{
+   /* background-color:   #ED8F03; */
+     color: #fff;
+    
 }
 
 
+.footer-options .foot-label{
+  color: #ED8F03;
+}
 </style>
