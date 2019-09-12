@@ -27,9 +27,6 @@
   box-sizing: border-box;
 }
 body{
-  background: linear-gradient(to right, #fc4a1a, #f7b733); 
-  background: linear-gradient(to bottom, #360033, #0b8793);
-  background: linear-gradient(to bottom, #000000, #434343);
   background: linear-gradient(to right, #000046, #1cb5e0);
 }
 #app {
@@ -80,7 +77,7 @@ a{
 }
 
 .about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
-  height: 100%;
+  height: 100vh;
   background: aliceblue;
   color: #3a3d40;
 }
@@ -102,7 +99,7 @@ hr{
 }
 .home{
   padding-top: 50px;
-  height: 100%;
+ 
 }
 .container{
   display: flex;
@@ -156,7 +153,8 @@ hr{
 }
 .footer-options{
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
+  left: 30px;
   display: flex;
   margin-left:30px;
   padding: 2px 3px;
