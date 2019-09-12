@@ -5,7 +5,7 @@
         <router-link to="/">&#9776;&nbsp;Home</router-link>
       </div>
       <hr>
-      <h1 class="page-title">Manage Examination and Scores</h1>
+      <h1 class="page-title">Manage Exams & Scores</h1>
       <hr>  
     </div>
   </div>

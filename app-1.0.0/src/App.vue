@@ -25,6 +25,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 body{
   background: linear-gradient(to right, #000046, #1cb5e0);
@@ -73,18 +74,19 @@ a{
   color: #fff;
 }
 .left-sidebar #back-home a{
-  color: #000;
-}
+  font-size: 15px;
 
+}
 .about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
-  height: 100vh;
-  background: aliceblue;
+  height: 96vh;
+  background: white;
   color: #3a3d40;
 }
 .left-sidebar{
   width: 20%;
   height: 100%;
   padding-left: 10px;
+  background-color: rgb(6, 41, 71)
 }
 #back-home{
   width: 100%;
@@ -96,6 +98,27 @@ hr{
 }
 .page-title{
   padding: 10px 0px;
+  color: white;
+  font-size: 16px;
+}
+.content{
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top: 25px; 
+  padding: 10px;
+}
+label{
+  font-size: 14px;
+  padding: 5px;
+  text-shadow: 5px 5px 10px grey;
+}
+input{
+  font-size: 14px;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px grey;
 }
 .home{
   padding-top: 50px;
@@ -120,7 +143,7 @@ hr{
 .grid-dashboards{
   display: grid;
   grid-template-columns: 34% 33.33% 33.33%;
-  grid-template-rows:100px 100px 100px;
+  grid-template-rows:120px 120px 120px;
   margin-bottom: 100px;
   grid-gap:14px;
 }
@@ -129,7 +152,7 @@ hr{
   align-items: center;
   justify-content:left;
   padding-right: 20px;
-  font-size: 30px;
+  /* font-size: 40px; */
   box-sizing: border-box; 
 }
 .grid-dashboards .nav-link a .nav-icon{
@@ -137,12 +160,11 @@ hr{
   margin: 0px auto;
 }
 .grid-dashboards .nav-link a .nav-icon svg{
-  width: 50px;
-  height: 40px;
-  font-size: 40px;
+  width: 90px;
+  height: 80px;
 }
 .grid-dashboards .nav-link a{
-  font-size: 22px;
+  font-size: 16px;
   margin: 0px auto;
 }
 .grid-dashboards .nav-link:hover{
