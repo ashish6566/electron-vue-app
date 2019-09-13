@@ -20,19 +20,21 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
 *{
   font-size: 10px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 body{
-  background: linear-gradient(to right, #000046, #1cb5e0);
+  background:linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  font-family: 'Roboto', sans-serif;
 }
 #app {
   height: 100%;
   width: 100%;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
@@ -41,6 +43,7 @@ body{
   width: 100%;
   -webkit-app-region: drag;
   height: 25px;
+   background-color: #fff8ed;
 }
 .window-control{
   position: absolute;
@@ -54,12 +57,12 @@ button{
 }
 .btnControl{
   font-weight: bold;
-  color: whitesmoke;
+  color: #000 ;
   height: 100%;
   width: 35px;
   background-color: transparent;
 }
-#btnAbout{
+#btnAbout a{
   margin-right: 5px;
 }
 #btnMin:hover{
@@ -98,80 +101,7 @@ hr{
   padding: 10px 0px;
 }
 .home{
-  padding-top: 50px;
+  padding-top: 0px;
  
-}
-.container{
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  width:80%;
-  margin: 0 auto;
-}
-.head-title{
-  height: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.head-title h2{
-  font-size: 45px;
-}
-.grid-dashboards{
-  display: grid;
-  grid-template-columns: 34% 33.33% 33.33%;
-  grid-template-rows:100px 100px 100px;
-  margin-bottom: 100px;
-  grid-gap:14px;
-}
-.grid-dashboards .nav-link{
-  display: flex;
-  align-items: center;
-  justify-content:left;
-  padding-right: 20px;
-  font-size: 30px;
-  box-sizing: border-box; 
-}
-.grid-dashboards .nav-link a .nav-icon{
-  padding: 10px;
-  margin: 0px auto;
-}
-.grid-dashboards .nav-link a .nav-icon svg{
-  width: 50px;
-  height: 40px;
-  font-size: 40px;
-}
-.grid-dashboards .nav-link a{
-  font-size: 22px;
-  margin: 0px auto;
-}
-.grid-dashboards .nav-link:hover{
-    /* border: #fff solid 1px; */
-      /* background: linear-gradient(to bottom, #ff8008, #ffc837); */
-    border:  #ED8F03 1px  solid;
-    margin: -1.1167px;
-}
-.footer-options{
-  position: absolute;
-  bottom: 10px;
-  left: 30px;
-  display: flex;
-  margin-left:30px;
-  padding: 2px 3px;
-}
-.footer-options .foot-icon{
-  padding-right: 10px;
-   color: #ED8F03;
-}
-.footer-options .foot-icon svg{
-  width: 30px;
-  height: 30px;
-}
-.footer-options:hover{
-   /* background-color:   #ED8F03; */
-     color: #fff;  
-}
-.footer-options .foot-label{
-  color: #ED8F03;
 }
 </style>
