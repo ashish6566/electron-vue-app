@@ -8,6 +8,13 @@
       <h1 class="page-title">Manage Students</h1>
       <hr>  
     </div>
+    <div class="content">
+      <div class="form">
+        <label for="studentName">Full Name</label>
+        <input type="text" name="student_name" id="student_name">
+        
+      </div>
+    </div>
   </div>
 </template>
 

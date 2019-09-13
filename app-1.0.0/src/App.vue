@@ -26,7 +26,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 body{
   background:linear-gradient(to right, #0f0c29, #302b63, #24243e);
@@ -76,18 +75,19 @@ a{
   color: #fff;
 }
 .left-sidebar #back-home a{
-  color: #000;
-}
+  font-size: 15px;
 
+}
 .about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
-  height: 100vh;
-  background: aliceblue;
+  height: 96vh;
+  background: white;
   color: #3a3d40;
 }
 .left-sidebar{
   width: 20%;
   height: 100%;
   padding-left: 10px;
+  background-color: rgb(6, 41, 71)
 }
 #back-home{
   width: 100%;
@@ -99,6 +99,27 @@ hr{
 }
 .page-title{
   padding: 10px 0px;
+  color: white;
+  font-size: 16px;
+}
+.content{
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top: 25px; 
+  padding: 10px;
+}
+label{
+  font-size: 14px;
+  padding: 5px;
+  text-shadow: 5px 5px 10px grey;
+}
+input{
+  font-size: 14px;
+  padding: 2px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px grey;
 }
 .home{
   padding-top: 0px;
