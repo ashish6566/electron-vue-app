@@ -137,6 +137,7 @@ export default {
   align-items: flex-start;
   flex-flow: column;
   padding: 30px;
+  padding-left:35px;
   background: url(../assets/whitelaptopcropped.jpg) no-repeat;
   background-size: cover;
   background-position: 29% 90%;
