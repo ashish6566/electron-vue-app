@@ -195,7 +195,7 @@ export default {
 
 .grid-dashboards{
   display: grid;
-  grid-template-columns: 19.3% 19.3% 19.3% 19.3% 19.3%;
+  grid-template-columns: 19% 19% 19% 19% auto;
   grid-template-rows: 140px 140px;
   margin-bottom: 0px;
   grid-gap:14px;
