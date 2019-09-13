@@ -131,7 +131,7 @@ export default {
   margin: 0 auto;
 }
 .head-title{
-  height: 35vh;
+  max-height: 35vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
