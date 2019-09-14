@@ -1,24 +1,18 @@
 <template>
   <div id="app">
-    <div class="controlbar">
-      <div class="window-control">  
-        <div class="controls">
-          <button class="btnControl" id="btnAbout">
-            <router-link to="/about" id="rlHome">&#8505;</router-link>
-          </button>
-        </div>
-        <div class="controls">
-            <button class="btnControl" id="btnMin">&#9866;</button>
-        </div>
-        <div class="controls">
-          <button class="btnControl" id="btnClose">&#9747;</button>
-        </div>
-      </div>
-    </div>
+    <ControlBar></ControlBar>
     <router-view/>
   </div>
 </template>
+<script>
+import ControlBar from '@/components/ControlBar.vue'
 
+export default {
+  components: {
+    ControlBar
+  }
+}
+</script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
 *{
@@ -50,29 +44,6 @@ body{
   display: flex;
   -webkit-app-region: no-drag;
   height: 25px;
-}
-button{
-  border: none;
-}
-
-.btnControl{
-  font-weight: bold;
-
-  height: 100%;
-  width: 35px;
-  background-color: transparent;
-}
-
-#btnAbout a{
-  margin-right: 5px;
-}
-
-#btnMin:hover{
-  background-color: grey;
-}
-
-#btnClose:hover{
-  background-color: red;
 }
 
 a{
