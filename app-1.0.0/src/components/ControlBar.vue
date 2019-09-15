@@ -37,7 +37,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .controlbar{
-  background: darkslategray;
+  background-color: rgb(44, 44, 44);
 }
 button{
   border: none;
