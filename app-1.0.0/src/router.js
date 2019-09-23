@@ -52,6 +52,11 @@ export default new Router({
       path: '/transportation',
       name: 'transportation',
       component: () => import('./views/Transportation.vue')
+    },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: () => import('./views/Setting.vue')
     }
   ]
 })

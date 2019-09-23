@@ -1,10 +1,11 @@
-import mysql from 'mysql'
+const mysql = require('mysql')
 
 var mysqlConnection = mysql.createConnection({
     host: 'localhost',
     user: 'system',
     password: 'password',
-    multipleStatements: true
+    multipleStatements: true,
+    database: 'db1'
 })
 
 mysqlConnection.connect((err)=>{
@@ -14,5 +15,8 @@ mysqlConnection.connect((err)=>{
         console.log("Connection Error:\n"+ err)
     }
 })
-
-export default mysqlConnection
+mysqlConnection.end((err)=>{
+    if(!err) console.log("Database Connection Closed.")
+    else throw err
+})
+module.exports = mysqlConnection

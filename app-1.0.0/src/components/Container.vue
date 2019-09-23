@@ -95,7 +95,7 @@
                 </div>  
             </router-link> 
 
-            <a><!--Need router-link-->
+            <router-link to="/setting"><!--Need router-link-->
             <div class="nav-link" id="rlAdmin"> 
                 <div class="nav-icon">
                 <i class="fas fa-cogs"></i>
@@ -104,7 +104,7 @@
                         <p>Setting</P>
                 </div> 
             </div>
-            </a>       
+            </router-link>       
             </div><!--End of grid-dashboard-->
         </div> <!--End of Dashboard-container-->
       </div><!--End of container--> 

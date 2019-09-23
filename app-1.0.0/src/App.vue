@@ -55,7 +55,7 @@ a{
   font-size: 15px;
 
 }
-.about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation{
+.about, .account, .admin, .exams-scores, .employee, .library, .student, .transportation, .setting{
   height: 96vh;
   background: white;
   color: #3a3d40;
