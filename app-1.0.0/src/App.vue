@@ -91,19 +91,21 @@ hr{
   top: 25px; 
   padding: 10px;
 }
-
+.nav-top{
+  width: 100%;
+  height: 30px;
+}
 label{
   font-size: 14px;
   padding: 5px;
-  text-shadow: 5px 5px 10px grey;
 }
 
 input{
   font-size: 14px;
-  padding: 2px;
+  padding: 15px;
   border: none;
   border-radius: 5px;
-  box-shadow: 5px 5px 10px grey;
+  box-shadow: 5px 5px 20px rgb(224, 220, 220);
 }
 
 .home{

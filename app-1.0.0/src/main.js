@@ -9,8 +9,8 @@ import {
   faUserGraduate, faMoneyCheckAlt, faBook, faHotel, faBus, faUsersCog, faChalkboardTeacher, faCogs
 } from '@fortawesome/free-solid-svg-icons'
 
-// --------Server for Database Rest API-------------
-const db = require('./db/dbconnection.js')
+// --------Database Connection Here For Test-------------
+import mysqlConnection from './db/dbconnection.js'
 //--------------------------------------------------
 dom.watch()
 library.add( faUserGraduate, faMoneyCheckAlt, faBook, faHotel, faBus, faUsersCog, faChalkboardTeacher, faCogs)

@@ -1,6 +1,7 @@
 const mysql = require('mysql')
 
-var mysqlConnection = mysql.createConnection({
+export const mysqlConnection =
+    mysql.createConnection({
     host: 'localhost',
     user: 'system',
     password: 'password',
@@ -8,7 +9,7 @@ var mysqlConnection = mysql.createConnection({
     database: 'db1'
 })
 
-mysqlConnection.connect((err)=>{
+ mysqlConnection.connect((err)=>{
     if(!err){
         console.log("Database connected.")
     } else {
@@ -19,4 +20,4 @@ mysqlConnection.end((err)=>{
     if(!err) console.log("Database Connection Closed.")
     else throw err
 })
-module.exports = mysqlConnection
+export default mysqlConnection
