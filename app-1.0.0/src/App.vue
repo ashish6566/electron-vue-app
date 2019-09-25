@@ -16,10 +16,11 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
 *{
-  font-size: 10px;
+  font-size: 12px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 body{
   background:linear-gradient(to right, #0f0c29, #302b63, #24243e);
@@ -65,7 +66,7 @@ a{
   width: 20%;
   height: 100%;
   padding-left: 10px;
-  background-color: rgb(6, 41, 71)
+  background-color: rgb(46, 58, 70)
 }
 
 #back-home{
@@ -75,7 +76,9 @@ a{
 }
 
 hr{
-  background:white; 
+  size: 1px;
+  background: white;
+  margin-bottom: 5px; 
 }
 
 .page-title{
@@ -93,24 +96,23 @@ hr{
 }
 .nav-top{
   width: 100%;
-  height: 30px;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #0f0c29;
 }
 label{
-  font-size: 14px;
-  padding: 5px;
+  font-size: 1.3rem;
+  padding: 10px;
 }
-
 input{
-  outline: none;
+  margin-bottom: 5px;
   font-size: 14px;
-  padding: 15px;
-  border: none;
+  padding: 5px auto ;
+  border: 1px solid rgb(192, 191, 191);
   border-radius: 1px;
   box-shadow: 5px 5px 20px rgb(224, 220, 220);
 }
-
 .home{
   padding-top: 0px;
- 
 }
 </style>
