@@ -101,10 +101,11 @@ label{
 }
 
 input{
+  outline: none;
   font-size: 14px;
   padding: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 1px;
   box-shadow: 5px 5px 20px rgb(224, 220, 220);
 }
 

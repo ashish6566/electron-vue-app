@@ -32,15 +32,15 @@ export default {
 .form{
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 90px auto 150px;
+  grid-template-columns: repeat(10, 1fr);
 }
 label{
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
 }
 input{
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 6;
   outline: none;
   padding: 10px;
 }
