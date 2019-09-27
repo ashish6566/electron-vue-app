@@ -6,7 +6,10 @@
       </div>
       <hr>
       <h1 class="page-title">Manage Students</h1>
-      <hr>  
+      <hr>
+      <div class="router-link" id="mng-studentclass">
+       <router-link to="/student/classes">Update Classes and Section of Students</router-link> 
+      </div>  
     </div>
     <div class="content">
       <div class="nav-top">
@@ -42,6 +45,10 @@
         
         <label for="email" id="lbl-email">Email: </label>
         <input type="email" name="email" id="email" placeholder="abc@example.com (optional)">
+        <div class="crud-buttons">
+          <button type="submit"></button>
+          <button type="reset"></button>
+        </div>
       </div>
       <div class="datagridview">
         <table class="student-view">
@@ -163,5 +170,9 @@ th{
 #th8{
   grid-column-start: 8;
   grid-column-end: 9;
+}
+.crud-buttons{
+  grid-column-start: 9;
+  grid-column-end: 10;
 }
 </style>

@@ -2,20 +2,23 @@
 
 import { app, protocol, BrowserWindow } from 'electron'
 import {
-  createProtocol,
-  installVueDevtools
+  createProtocol//,
+  //installVueDevtools
 } from 'vue-cli-plugin-electron-builder/lib'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+// --------Database Connection Here For Test-------------
+import mysqlConnection from '../db/dbconnection'
+//--------------------------------------------------
+
 let win
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{scheme: 'app', privileges: { secure: true, standard: true } }])
 
+// Create the browser window.
 function createWindow () {
-  // Create the browser window.
+  console.log("Loading Renderer Window...")
   win = new BrowserWindow({
     width: 1920,
     height: 1080,
@@ -30,11 +33,14 @@ function createWindow () {
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
+    console.log(`Dev Version 1.0.0
+    \nRenderring...`)
     if (!process.env.IS_TEST) win.webContents.openDevTools()
   } else {
     createProtocol('app')
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
+    console.log("Production Version 1.0.0")
   }
 
   win.on('closed', () => {
@@ -59,11 +65,8 @@ app.on('activate', () => {
   }
 })
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
 app.on('ready', async () => {
-  if (isDevelopment && !process.env.IS_TEST) {
+  // if (isDevelopment && !process.env.IS_TEST) {
     // Install Vue Devtools
     // Devtools extensions are broken in Electron 6.0.0 and greater
     // See https://github.com/nklayman/vue-cli-plugin-electron-builder/issues/378 for more info
@@ -75,7 +78,7 @@ app.on('ready', async () => {
     // } catch (e) {
     //   console.error('Vue Devtools failed to install:', e.toString())
     // }
-  }
+  // }
   createWindow()
 })
 

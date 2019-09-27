@@ -9,9 +9,6 @@ import {
   faUserGraduate, faMoneyCheckAlt, faBook, faHotel, faBus, faUsersCog, faChalkboardTeacher, faCogs
 } from '@fortawesome/free-solid-svg-icons'
 
-// --------Database Connection Here For Test-------------
-import mysqlConnection from './db/dbconnection.js'
-//--------------------------------------------------
 dom.watch()
 library.add( faUserGraduate, faMoneyCheckAlt, faBook, faHotel, faBus, faUsersCog, faChalkboardTeacher, faCogs)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
