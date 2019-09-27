@@ -8,7 +8,7 @@ import {
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // --------Database Connection Here For Test-------------
-import mysqlConnection from '../db/dbconnection'
+//import mysqlConnection from '../db/dbconnection'
 //--------------------------------------------------
 
 let win
@@ -18,7 +18,7 @@ protocol.registerSchemesAsPrivileged([{scheme: 'app', privileges: { secure: true
 
 // Create the browser window.
 function createWindow () {
-  console.log("Loading Renderer Window...")
+  // console.log("Loading Renderer Window...")
   win = new BrowserWindow({
     width: 1920,
     height: 1080,
@@ -33,14 +33,13 @@ function createWindow () {
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
-    console.log(`Dev Version 1.0.0
-    \nRenderring...`)
+    //console.log("Dev Version 1.0.0 \n\n"+ "Renderring...")
     if (!process.env.IS_TEST) win.webContents.openDevTools()
   } else {
     createProtocol('app')
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
-    console.log("Production Version 1.0.0")
+    //console.log("Production Version 1.0.0")
   }
 
   win.on('closed', () => {
