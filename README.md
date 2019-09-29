@@ -1,11 +1,11 @@
-<div align="center">
+<div>
     <br/>
         <img width="400" src="images/electron-vue.png" alt="electron-vue">
     <br/>
     <br/>
 </div>
 
-# electron-vue-app
+# School Management System
 
 A School Management Software in `Electron` with `Vue` and `MySQL`
 
