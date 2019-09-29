@@ -1,62 +1,76 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "./views/Home.vue";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "home",
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue')
+      path: "/about",
+      name: "about",
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: '/student',
-      name: 'student',
-      component: () => import('./views/Student.vue')
+      path: "/student",
+      name: "student",
+      component: () =>
+        import(/* webpackChunkName: "student" */ "./views/Student.vue")
     },
     {
-      path: '/employee',
-      name: 'employee',
-      component: () => import('./views/Employee.vue')
+      path: "/employee",
+      name: "employee",
+      component: () =>
+        import(/* webpackChunkName: "employee" */ "./views/Employee.vue")
     },
     {
-      path: '/account',
-      name: 'account',
-      component: () => import('./views/Account.vue')
+      path: "/account",
+      name: "account",
+      component: () =>
+        import(/* webpackChunkName: "account" */ "./views/Account.vue")
     },
     {
-      path: '/exams_score',
-      name: 'exams_score',
-      component: () => import('./views/ExamsScores.vue')
+      path: "/exams-score",
+      name: "exams-score",
+      component: () =>
+        import(/* webpackChunkName: "exam-score" */ "./views/Exams-Scores.vue")
     },
     {
-      path: '/library',
-      name: 'library',
-      component: () => import('./views/Library.vue')
+      path: "/library",
+      name: "library",
+      component: () =>
+        import(/* webpackChunkName: "library" */ "./views/Library.vue")
     },
     {
-      path: '/admin',
-      name: 'admin',
-      component: () => import('./views/Admin.vue')
+      path: "/admin",
+      name: "admin",
+      component: () =>
+        import(/* webpackChunkName: "admin" */ "./views/Admin.vue")
     },
     {
-      path: '/transportation',
-      name: 'transportation',
-      component: () => import('./views/Transportation.vue')
+      path: "/transportation",
+      name: "transportation",
+      component: () =>
+        import(
+          /* webpackChunkName: "transportation" */ "./views/Transportation.vue"
+        )
     },
     {
-      path: '/setting',
-      name: 'setting',
-      component: () => import('./views/Setting.vue')
+      path: "/setting",
+      name: "setting",
+      component: () =>
+        import(/* webpackChunkName: "setting" */ "./views/Setting.vue")
     }
   ]
-})
+});
