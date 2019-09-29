@@ -1,2 +1,3 @@
 # electron-vue-app
-A School Management Software in electron with VueJS 
+
+A School Management Software in `Electron` with `Vue` and `MySQL`
