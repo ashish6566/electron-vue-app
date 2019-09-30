@@ -51,7 +51,7 @@ body {
 .left-sidebar {
   width: 20%;
   height: 100%;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   background-color: rgb(46, 58, 70);
 }
 a {
@@ -66,10 +66,10 @@ a {
 hr {
   size: 1px;
   background: white;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 .page-title {
-  padding: 10px 0px;
+  padding: 15px;
   color: white;
   font-size: 16px;
 }

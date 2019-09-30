@@ -1,10 +1,17 @@
 const mysql = require("mysql");
 
-export const mysqlConnection = mysql.createConnection({
+export const dbconfig = {
   host: "localhost",
   user: "system",
   password: "password",
-  multipleStatements: true,
+  multipleStatements: true
+};
+
+export const mysqlConnection = mysql.createConnection({
+  host: dbconfig.host,
+  user: dbconfig.user,
+  password: dbconfig.password,
+  multipleStatements: dbconfig.multipleStatements,
   database: "db1"
 });
 

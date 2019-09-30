@@ -7,95 +7,16 @@
       <hr />
       <h1 class="page-title">Manage Students</h1>
       <hr />
-      <div class="router-link" id="mng-studentclass">
-        <router-link to="/student/classes"
-          >Update Classes and Section of Students</router-link
-        >
+      <div class="sub-view-link" id="mng-studentclass">
+        <a class="sub-nav" to="/student/register">Register New Students</a>
+        <a class="sub-nav" to="/student/classes">Update Grades of Students</a>
       </div>
     </div>
     <div class="content">
-      <div class="nav-top">
-        Home / Students
-      </div>
+      <div class="nav-top">Home / Students</div>
       <hr id="separate-navtop-content" />
-      <div class="form">
-        <label for="studentName" id="lbl-studentname">Student Name: </label>
-        <input
-          type="text"
-          name="student_name"
-          id="student_name"
-          placeholder="Please provide full name"
-        />
-
-        <label for="datepicker" id="lbl-dateofbirth">Date of Birth: </label>
-        <input
-          type="date"
-          min="2000-01-01"
-          max="2100-12-30"
-          name="datepicker"
-          id="datepicker"
-        />
-
-        <label for="gender" id="lbl-gender">Gender: </label>
-        <input
-          type="text"
-          name="gender"
-          id="gender"
-          list="list-gender"
-          placeholder="Choose"
-        />
-        <datalist id="list-gender">
-          <option value="Male"></option>
-          <option value="Female"></option>
-          <option value="Others"></option>
-        </datalist>
-
-        <label for="guardian-name" id="lbl-guardian-name"
-          >Guardian Name:
-        </label>
-        <input
-          type="text"
-          name="guardian-name"
-          id="guardian-name"
-          placeholder="Please provide full name"
-        />
-
-        <label for="address" id="lbl-address">Address: </label>
-        <input
-          type="text"
-          name="address"
-          id="adress"
-          placeholder="minimum street/community, village/town/city, district"
-        />
-
-        <label for="phone" id="lbl-phone">Phone No: </label>
-        <input
-          type="text"
-          name="phone"
-          id="phone"
-          placeholder="Mobile Phone no."
-        />
-
-        <label for="landline" id="lbl-landline">LandLine: </label>
-        <input
-          type="text"
-          name="landline"
-          id="landline"
-          placeholder="(optional)"
-        />
-
-        <label for="email" id="lbl-email">Email: </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="abc@example.com (optional)"
-        />
-        <div class="crud-buttons">
-          <button type="submit"></button>
-          <button type="reset"></button>
-        </div>
-      </div>
+      <StudentRegister />
+      <hr />
       <div class="datagridview">
         <table class="student-view">
           <tr>
@@ -118,54 +39,36 @@
 </template>
 
 <script>
+import StudentRegister from "@/components/Student-Register.vue";
 export default {
-  name: "student"
+  name: "student",
+  components: {
+    StudentRegister
+  }
 };
 </script>
 
 <style scoped>
-.form {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(12, 1fr);
+.sub-nav {
+  width: 100%;
+  font-size: 1.3rem;
+  display: inline-block;
+  padding: 10px;
+  border-bottom: 1px solid;
 }
+.sub-nav:hover {
+  background: darkslategrey;
+  /* add linear-gradient in background */
+}
+
 #separate-navtop-content {
   background: rgb(32, 67, 90);
 }
-.form label {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-input {
-  grid-column-start: 3;
-  grid-column-end: 8;
-  outline: none;
-  padding: 10px;
-}
-#datepicker {
-  grid-column-end: 5;
-}
-#lbl-gender {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  padding-left: 3rem;
-}
-#gender {
-  grid-column-start: 6;
-}
-#phone {
-  grid-column-end: 5;
-}
-#lbl-landline {
-  grid-column-start: 5;
-  grid-column-end: 6;
-}
-#landline {
-  grid-column-start: 6;
-}
+
 .datagridview {
-  margin-top: 15px;
+  padding: 10px 0;
   width: 100%;
+  /* overflow-y: scroll; */
 }
 table {
   display: grid;
@@ -216,9 +119,5 @@ th {
 #th8 {
   grid-column-start: 8;
   grid-column-end: 9;
-}
-.crud-buttons {
-  grid-column-start: 9;
-  grid-column-end: 10;
 }
 </style>

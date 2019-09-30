@@ -1,5 +1,5 @@
 <template>
-  <div class="controlbar">
+  <div class="app-controlbar">
     <div class="window-control">
       <div class="controls">
         <button class="btnControl" id="btnAbout">
@@ -40,7 +40,7 @@ export default {
   width: 100%;
   -webkit-app-region: drag;
   height: 25px;
-  background-color: #fff8ed;
+  background-color: rgb(3, 41, 41);
 }
 .window-control {
   position: absolute;
