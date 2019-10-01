@@ -12,5 +12,5 @@ var dbconfig = {
 const connection = mysql.createConnection(dbconfig);
 const connectionpool = mysql.createPool(dbconfig);
 
-export { connectionpool as connpool };
-export default connection;
+export { connectionpool as dbConnPool };
+export { connection as dbConn };

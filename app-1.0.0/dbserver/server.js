@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import dbConnection, { connpool } from "./dbconnection";
+import { dbConn, dbConnPool } from "./dbconnection"; //remove any one in case that one is not utilized.
 
 const server = express();
 
