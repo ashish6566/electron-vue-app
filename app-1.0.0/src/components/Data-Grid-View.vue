@@ -2,11 +2,11 @@
   <table id="data-grid-view">
     <thead>
       <tr>
-        <th v-for="col in columns" :key="col">{{col}}</th>
+        <th v-for="col in columns" :key="col.id">{{col}}</th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="row in rows" :key="row">
+      <tr v-for="row in rows.id" :key="row">
         <td v-for="col in columns" :key="col">{{row[col]}}</td>
       </tr>
     </tbody>
