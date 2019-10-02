@@ -9,8 +9,8 @@ var dbconfig = {
   debug: false
 };
 
-const connection = mysql.createConnection(dbconfig);
+// const connection = mysql.createConnection(dbconfig);
 const connectionpool = mysql.createPool(dbconfig);
 
 export { connectionpool as dbConnPool };
-export { connection as dbConn };
+// export { connection as dbConn };
