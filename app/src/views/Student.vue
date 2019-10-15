@@ -17,7 +17,8 @@
       <hr id="separate-navtop-content" />
       <StudentRegister />
       <hr />
-      <div class="datagridview">
+      <DataGridView />
+      <!-- <div class="datagridview">
         <table class="student-view">
           <tr>
             <th id="th1">ID</th>
@@ -33,13 +34,14 @@
             <td>Demo Data</td>
           </tr>
         </table>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
 
 <script>
 import StudentRegister from "@/components/Student-Register.vue";
+import DataGridView from "@/components/Data-Grid-View.vue";
 export default {
   name: "student",
   components: {

@@ -32,7 +32,7 @@
       <input
         type="text"
         name="address"
-        id="adress"
+        id="address"
         placeholder="minimum street/community, village/town/city, district"
       />
 
@@ -47,9 +47,13 @@
     </div>
     <div class="crud-buttons">
       <button type="submit">Register</button>
+      <br />
       <button type="submit">Modify</button>
+      <br />
       <button type="submit">Delete</button>
+      <br />
       <button type="submit">Register</button>
+      <br />
       <button type="reset">Clear</button>
     </div>
   </div>
@@ -72,7 +76,7 @@ export default {
 <style scoped>
 .student-register {
   display: grid;
-  grid-template-columns: 1fr 1fr 250px;
+  grid-template-columns: 1fr 1fr auto;
   grid-auto-flow: row;
   padding: 10px;
 }
@@ -81,47 +85,41 @@ export default {
   grid-column-end: 3;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
 }
 .form label {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
 }
 input {
-  grid-column-start: 3;
-  grid-column-end: 8;
+  grid-column-start: 2;
+  grid-column-end: 5;
   outline: none;
   padding: 10px;
 }
-#datepicker {
-  grid-column-end: 5;
+#datepicker,
+#phone {
+  grid-column-end: 3;
+}
+#lbl-gender,
+#lbl-landline {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 #lbl-gender {
-  grid-column-start: 5;
-  grid-column-end: 6;
   padding-left: 3rem;
 }
-#gender {
-  grid-column-start: 6;
-}
-#phone {
-  grid-column-end: 5;
-}
-#lbl-landline {
-  grid-column-start: 5;
-  grid-column-end: 6;
-}
+#gender,
 #landline {
-  grid-column-start: 6;
+  grid-column-start: 4;
 }
 .crud-buttons {
   padding: 10px;
 }
 button {
   width: 150px;
-  margin: 0;
+  margin: 5px;
   padding: 10px;
   font-size: 15px;
-  margin: 5px;
 }
 </style>

@@ -5,8 +5,7 @@ import {
   createProtocol,
   installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
-
-const dbserver = require("../dbserver")
+import serverside from "../dbserver/server.js"; //import dbserver
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
@@ -60,6 +59,7 @@ app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
   }
+  closeServerSide();
 });
 
 app.on("activate", () => {
@@ -67,6 +67,7 @@ app.on("activate", () => {
   // dock icon is clicked and there are no other windows open.
   if (win === null) {
     createWindow();
+    startServerside();
   }
 });
 
@@ -82,12 +83,13 @@ app.on("ready", async () => {
     // If you are not using Windows 10 dark mode, you may uncomment these lines
     // In addition, if the linked issue is closed, you can upgrade electron and uncomment these lines
     // try {
-    //   await installVueDevtools()
+    //   await installVueDevtools();
     // } catch (e) {
-    //   console.error('Vue Devtools failed to install:', e.toString())
+    //   console.error("Vue Devtools failed to install:", e.toString());
     // }
   }
   createWindow();
+  startServerside();
 });
 
 // Exit cleanly on request from parent process in development mode.
@@ -96,11 +98,30 @@ if (isDevelopment) {
     process.on("message", data => {
       if (data === "graceful-exit") {
         app.quit();
+        closeServerSide();
       }
     });
   } else {
     process.on("SIGTERM", () => {
       app.quit();
+      closeServerSide();
     });
+  }
+}
+
+//database server part
+
+let serverstatus = serverside.isserver;
+
+async function startServerside() {
+  if (serverstatus === false) {
+    await serverside.initserver();
+    await serverside.startserver();
+  }
+}
+
+async function closeServerSide() {
+  if (serverstatus === true) {
+    await serverside.dbserver.close();
   }
 }
