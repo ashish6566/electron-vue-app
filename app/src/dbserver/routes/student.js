@@ -1,5 +1,5 @@
 import express from "express";
-import dbConnPool from "../dbconnection/connection";
+import dbConnPool from "../dbconnection/connection.js";
 
 const router = express.Router();
 
@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
         if (err) res.status(500).send(`Error:\n ${err.message}`);
         res.send(result);
       });
-      connection.end();
+      connection.release();
     }
   });
 });

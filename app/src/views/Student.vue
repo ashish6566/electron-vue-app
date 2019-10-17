@@ -17,35 +17,19 @@
       <hr id="separate-navtop-content" />
       <StudentRegister />
       <hr />
-      <DataGridView />
-      <!-- <div class="datagridview">
-        <table class="student-view">
-          <tr>
-            <th id="th1">ID</th>
-            <th id="th2">Registration ID</th>
-            <th id="th3">Full Name</th>
-            <th id="th4">Date of Birth</th>
-            <th id="th5">Gender</th>
-            <th id="th6">Guardian</th>
-            <th id="th7">Contact Info</th>
-            <th id="th8">Address</th>
-          </tr>
-          <tr>
-            <td>Demo Data</td>
-          </tr>
-        </table>
-      </div>-->
+      <student-grid/>
     </div>
   </div>
 </template>
 
 <script>
 import StudentRegister from "@/components/Student-Register.vue";
-import DataGridView from "@/components/Data-Grid-View.vue";
+import StudentGrid from "../components/Student-Grid.vue";
 export default {
   name: "student",
   components: {
-    StudentRegister
+    StudentRegister,
+    StudentGrid
   }
 };
 </script>

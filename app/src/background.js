@@ -5,7 +5,7 @@ import {
   createProtocol,
   installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
-import serverside from "../dbserver/server.js"; //import dbserver
+import serverside from "./dbserver/server.js"; //import dbserver
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
@@ -82,11 +82,11 @@ app.on("ready", async () => {
     // Electron will not launch with Devtools extensions installed on Windows 10 with dark mode
     // If you are not using Windows 10 dark mode, you may uncomment these lines
     // In addition, if the linked issue is closed, you can upgrade electron and uncomment these lines
-    // try {
-    //   await installVueDevtools();
-    // } catch (e) {
-    //   console.error("Vue Devtools failed to install:", e.toString());
-    // }
+    try {
+      await installVueDevtools(true);
+    } catch (e) {
+      console.error("Vue Devtools failed to install:", e.toString());
+    }
   }
   createWindow();
   startServerside();
@@ -114,14 +114,21 @@ if (isDevelopment) {
 let serverstatus = serverside.isserver;
 
 async function startServerside() {
-  if (serverstatus === false) {
-    await serverside.initserver();
-    await serverside.startserver();
+  try {
+    if (serverstatus === false) {
+      await serverside.startserver();
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 
 async function closeServerSide() {
-  if (serverstatus === true) {
-    await serverside.dbserver.close();
+  try {
+    if (serverstatus === true) {
+      await serverside.dbserver.close();
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
