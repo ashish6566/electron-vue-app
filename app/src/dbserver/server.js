@@ -11,6 +11,13 @@ async function initserver() {
   server.use(express.urlencoded({ extended: true }), express.json());
 
   server.use("/api/students", studentRouter);
+
+  server.get("/", (req, res, next) => {
+    res.send("School Management System Database Server ");
+    next(err => {
+      if (err) res.send(err);
+    });
+  });
 }
 
 async function startserver() {

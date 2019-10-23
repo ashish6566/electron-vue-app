@@ -17,14 +17,14 @@
       <hr id="separate-navtop-content" />
       <StudentRegister />
       <hr />
-      <student-grid/>
+      <StudentGrid />
     </div>
   </div>
 </template>
 
 <script>
 import StudentRegister from "@/components/Student-Register.vue";
-import StudentGrid from "../components/Student-Grid.vue";
+import StudentGrid from "@/components/Student-Grid.vue";
 export default {
   name: "student",
   components: {
