@@ -7,7 +7,7 @@
     </thead>
     <tbody>
       <tr v-for="(row, index) in rows" :key="index">
-        <td v-for="col in columns" :key="col">{{row[col]}}</td>
+        <td v-for="col in columns" :key="col">{{col}}</td>
       </tr>
     </tbody>
   </table>
@@ -23,12 +23,12 @@ export default {
     };
   },
   computed: {
-    // columns: () => {
-    //   if (this.rows.length == 0) {
-    //     return [];
-    //   }
-    //   return Object.keys(this.rows[0]);
-    // },
+    columns: () => {
+      if (this.rows.length == 0) {
+        return [];
+      }
+      return Object.keys(this.rows[0]);
+    },
     ...mapGetters({
       students: "STUDENTS"
     }),

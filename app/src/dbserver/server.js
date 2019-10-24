@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import studentRouter from "./routes/student.js";
 
 const port = process.env.PORT || 3000;
@@ -9,6 +10,7 @@ let dbserver;
 async function initserver() {
   server.use(express.json());
   server.use(express.urlencoded({ extended: true }), express.json());
+  server.use(cors());
 
   server.use("/api/students", studentRouter);
 
