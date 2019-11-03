@@ -67,5 +67,6 @@ th,td {
   font-size: 1.2rem;
   text-align: left;
 }
-tr:hover {background-color: #f5f5f5;}
+tr:hover {
+  background-color: #f5f5f5;}
 </style>
