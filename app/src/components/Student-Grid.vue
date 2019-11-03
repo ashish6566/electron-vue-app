@@ -24,8 +24,8 @@
         </tr>
       </tbody>
     </table>
-     </div>
-  </div>
+   </div><!-- End of table-responsive-->
+  </div><!--End of Student-grid-->
 </template>
 
 <script>
@@ -60,10 +60,8 @@ export default {
 th{
 background-color:  #e6edff;
 }
-td{
 
-}
-th, td {
+th,td {
   border-bottom: 1px solid #ddd;
   padding: 15px;
   font-size: 1.2rem;
