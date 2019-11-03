@@ -5,7 +5,7 @@ import {
   createProtocol,
   installVueDevtools
 } from "vue-cli-plugin-electron-builder/lib";
-import serverside from "./dbserver/server.js"; //import dbserver
+import { dbServer, isServer, launchServer } from "./dbserver/server.js"; //import dbserver
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
@@ -111,12 +111,10 @@ if (isDevelopment) {
 
 //database server part
 
-let serverstatus = serverside.isserver;
-
 async function startServerside() {
   try {
-    if (serverstatus === false) {
-      await serverside.startserver();
+    if (isServer === false) {
+      await launchServer();
     }
   } catch (error) {
     console.log(error);
@@ -125,8 +123,8 @@ async function startServerside() {
 
 async function closeServerSide() {
   try {
-    if (serverstatus === true) {
-      await serverside.dbserver.close();
+    if (isServer === true) {
+      await dbServer.close();
     }
   } catch (error) {
     console.log(error);
