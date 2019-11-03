@@ -5,7 +5,7 @@ import cors from "cors";
 import students from "./routes/student";
 
 const app = express();
-let port = 3000 || process.env.PORT;
+let port = 3000 || process.env.PORT; //Use either assigned port or default 3000
 
 app.use(
   express.urlencoded({
@@ -14,27 +14,29 @@ app.use(
 );
 app.use(cors());
 
-//use imorted routes from below
+//use imorted routes in space below
 app.use("/students", students);
 
 app.get("/", (req, res, next) => {
-  res.send("School Management System Database Server");
+  res.status(200).send("School Management System Database Server");
 
   next(err => {
-    res.send(err);
+    res.status(500).send(err);
   });
 });
 
-export let isServer = false;
+let isServer = false; // is Server listening: false
 
-export function launchServer() {
+let dbServer; //later after express app starts listening will return instance of Server
+
+function launchServer() {
   if (isServer == false) {
-    return {
-      dbserver: app.listen(port, () => {
-        console.log(`Database Server: http://localhost:${port}`);
-        isServer = true;
-      })
-    };
+    dbServer = app.listen(port, () => {
+      console.log(`Database Server: http://localhost:${port}`);
+      isServer = true;
+    });
   }
 }
-launchServer(); // invoking function
+
+//exports from this module
+export { dbServer, isServer, launchServer };
