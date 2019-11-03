@@ -1,36 +1,40 @@
 import express from "express";
 import cors from "cors";
-import studentRouter from "./routes/student.js";
 
-const port = process.env.PORT || 3000;
-const server = express();
-let isserver = false;
-let dbserver;
+//routes import
+import students from "./routes/student";
 
-async function initserver() {
-  server.use(express.json());
-  server.use(express.urlencoded({ extended: true }), express.json());
-  server.use(cors());
+const app = express();
+let port = 3000 || process.env.PORT;
 
-  server.use("/api/students", studentRouter);
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+);
+app.use(cors());
 
-  server.get("/", (req, res, next) => {
-    res.send("School Management System Database Server ");
-    next(err => {
-      if (err) res.send(err);
-    });
+//use imorted routes from below
+app.use("/students", students);
+
+app.get("/", (req, res, next) => {
+  res.send("School Management System Database Server");
+
+  next(err => {
+    res.send(err);
   });
-}
+});
 
-async function startserver() {
-  await initserver();
+export let isServer = false;
 
-  if (isserver == false) {
-    dbserver = server.listen(port, () => {
-      console.log(`- Database Server: http://localhost:${port}/`);
-      isserver = true;
-    });
+export function launchServer() {
+  if (isServer == false) {
+    return {
+      dbserver: app.listen(port, () => {
+        console.log(`Database Server: http://localhost:${port}`);
+        isServer = true;
+      })
+    };
   }
 }
-
-export default { dbserver, startserver, isserver };
+launchServer(); // invoking function

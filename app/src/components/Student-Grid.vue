@@ -46,6 +46,7 @@ export default {
       .get("http://localhost:3000/api/students")
       .then(res => {
         this.rows = res.data;
+        consol.log(res.data);
       })
       .catch(e => console.log(e));
   }
