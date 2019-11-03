@@ -5,7 +5,7 @@
     </h1>
     <div class="table-responsive">
     <table id="data-grid-view" class="table">
-      <thead>
+      ..<thead>
         <tr>
           <th>ID</th>
           <th>Registration ID</th>
@@ -24,8 +24,8 @@
         </tr>
       </tbody>
     </table>
-     </div>
-  </div>
+   </div><!-- End of table-responsive-->
+  </div><!--End of Student-grid-->
 </template>
 
 <script>
@@ -53,5 +53,22 @@ export default {
 };
 </script>
 
-<!--<style>
-</style>-->
+<style>
+.table-responsive{
+  overflow-x:auto;
+}
+
+th{
+  background-color:  #e6edff;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+tr:hover {
+  background-color: #f5f5f5;
+  }
+</style>
