@@ -52,5 +52,21 @@ export default {
 };
 </script>
 
-<!--<style>
-</style>-->
+<style>
+.table-responsive{
+  overflow-x:auto;
+}
+th{
+background-color:  #e6edff;
+}
+td{
+
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+tr:hover {background-color: #f5f5f5;}
+</style>
