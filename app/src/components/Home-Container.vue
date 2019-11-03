@@ -3,15 +3,14 @@
     <div class="head-title">
       <div class="headDiv">
         <h2>
-          Shanti Academy <br />
-          Information Management System<span id="copyright">&copy;</span
-          ><!-- require a component to display name as required-->
+          Shanti Academy
+          <br />Information Management System
+          <span id="copyright">&copy;</span>
+          <!-- require a component to display name as required-->
         </h2>
       </div>
       <div class="descDiv">
-        <p id="head-desc">
-          School Management System Specially Created for Shanti Academy.
-        </p>
+        <p id="head-desc">School Management System Specially Created for Shanti Academy.</p>
       </div>
       <div class="aboutDiv">
         <a id="btnAbout">About Developer</a>
@@ -100,8 +99,8 @@
           </div>
         </router-link>
 
-        <router-link to="/setting"
-          ><!--Need router-link-->
+        <router-link to="/setting">
+          <!--Need router-link-->
           <div class="nav-link" id="rlAdmin">
             <div class="nav-icon">
               <i class="fas fa-cogs"></i>

@@ -37,10 +37,10 @@ Vue.config.productionTip = false;
 //For bootstrapVue
 
 //Importing only TablePlugin but still conflicting with own css dunno why.
-// import {TablePlugin} from 'bootstrap-vue';
-// Vue.use(TablePlugin)
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { TablePlugin } from "bootstrap-vue";
+Vue.use(TablePlugin);
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
 
 new Vue({
   router,
