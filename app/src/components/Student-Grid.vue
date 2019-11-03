@@ -3,7 +3,8 @@
     <h1>
       <strong>Students Data Grid View</strong>
     </h1>
-    <table id="data-grid-view">
+    <div class="table-responsive">
+    <table id="data-grid-view" class="table">
       <thead>
         <tr>
           <th>ID</th>
@@ -23,6 +24,7 @@
         </tr>
       </tbody>
     </table>
+     </div>
   </div>
 </template>
 
