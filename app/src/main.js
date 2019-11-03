@@ -3,7 +3,6 @@ import App from "./App.vue";
 import router from "./router";
 import VueElectron from "vue-electron";
 
-
 //For FontAwesome
 import { dom } from "@fortawesome/fontawesome-svg-core";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -31,11 +30,9 @@ library.add(
   faCogs
 );
 
-
 Vue.use(VueElectron);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
-
 
 //For bootstrapVue
 
