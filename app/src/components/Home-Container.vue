@@ -128,7 +128,7 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  width: 100% !important;
+  width: 100%;
   margin: 0 auto;
 }
 .head-title {
