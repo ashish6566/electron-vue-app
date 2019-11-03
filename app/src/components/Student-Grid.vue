@@ -5,7 +5,7 @@
     </h1>
     <div class="table-responsive">
     <table id="data-grid-view" class="table">
-      <thead>
+      ..<thead>
         <tr>
           <th>ID</th>
           <th>Registration ID</th>
@@ -57,16 +57,18 @@ export default {
 .table-responsive{
   overflow-x:auto;
 }
+
 th{
-background-color:  #e6edff;
+  background-color:  #e6edff;
 }
 
-th,td {
+th, td {
   border-bottom: 1px solid #ddd;
   padding: 15px;
   font-size: 1.2rem;
   text-align: left;
 }
 tr:hover {
-  background-color: #f5f5f5;}
+  background-color: #f5f5f5;
+  }
 </style>
