@@ -1,16 +1,9 @@
 <template>
   <div id="app">
-    <AppControlBar />
     <router-view />
   </div>
 </template>
 <script>
-import AppControlBar from "@/components/App-ControlBar";
-export default {
-  components: {
-    AppControlBar
-  }
-};
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
