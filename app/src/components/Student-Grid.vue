@@ -41,7 +41,9 @@ export default {
     };
   },
 
-  computed: {},
+  computed: {
+    
+  },
 
   mounted() {
     axios
