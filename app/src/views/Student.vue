@@ -17,8 +17,7 @@
       <hr id="separate-navtop-content" />
       <StudentRegister />
       <hr />
-
-      <DataGridView v-bind:rows="students" v-bind:columns="keys" />
+      <StudentGrid />
     </div>
   </div>
 </template>
@@ -26,29 +25,13 @@
 <script>
 import axios from "axios";
 import StudentRegister from "@/components/Student-Register.vue";
-//import StudentGrid from "@/components/Student-Grid.vue";
-import DataGridView from "@/components/Data-Grid-View.vue";
+import StudentGrid from "@/components/Student-Grid.vue";
+// import DataGridView from "@/components/Data-Grid-View.vue";
 export default {
   name: "student",
-  data() {
-    return {
-      students: [],
-      keys: []
-    };
-  },
   components: {
     StudentRegister,
-    //StudentGrid,
-    DataGridView
-  },
-  mounted() {
-    axios
-      .get("http://localhost:3000/students")
-      .then(res => {
-        this.students = res.data;
-        this.keys = Object.keys(this.students[0]);
-      })
-      .catch(e => console.log(e));
+    StudentGrid
   }
 };
 </script>

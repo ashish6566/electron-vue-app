@@ -1,30 +1,7 @@
 <template>
   <div class="student-grid">
-    <h1>
-      <strong>Students Data Grid View</strong>
-    </h1>
-    <div class="table-responsive">
-      <table id="data-grid-view" class="table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Registration ID</th>
-            <th>Firstname</th>
-            <th>Surname</th>
-            <th>Gender</th>
-            <th>Birth Date</th>
-            <th>Guardian Name</th>
-            <th>Contact Info</th>
-            <th>Address</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(row, index) in rows" :key="index">
-            <td v-for="(col, index) in row" :key="index">{{ col }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p>Students Data Grid View</p>
+    <DataGridView v-bind:rows="students" v-bind:columns="keys" />
     <!-- End of table-responsive-->
   </div>
   <!--End of Student-grid-->
@@ -32,24 +9,24 @@
 
 <script>
 import axios from "axios";
+import DataGridView from "@/components/Data-Grid-View.vue";
 export default {
   name: "StudentGrid",
-
-  data: () => {
+  data() {
     return {
-      rows: []
+      students: [],
+      keys: []
     };
   },
-
-  computed: {
-    
+  components: {
+    DataGridView
   },
-
   mounted() {
     axios
       .get("http://localhost:3000/students")
       .then(res => {
-        this.rows = res.data;
+        this.students = res.data;
+        this.keys = Object.keys(this.students[0]);
       })
       .catch(e => console.log(e));
   }
@@ -57,22 +34,4 @@ export default {
 </script>
 
 <style>
-.table-responsive {
-  overflow: auto;
-}
-
-th {
-  background-color: #e6edff;
-}
-
-th,
-td {
-  border-bottom: 1px solid #ddd;
-  padding: 15px;
-  font-size: 1.2rem;
-  text-align: left;
-}
-tr:hover {
-  background-color: #f5f5f5;
-}
 </style>

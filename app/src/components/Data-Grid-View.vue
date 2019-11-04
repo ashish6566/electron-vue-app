@@ -14,11 +14,6 @@
 <script>
 export default {
   name: "DataGridView",
-  // data() {
-  //   return {
-  //     rows: []
-  //   };
-  // },
   props: {
     rows: {
       type: Array,
@@ -34,9 +29,6 @@ export default {
 <style>
 .table-responsive {
   overflow: auto;
-}
-table {
-  overflow: auto;
   width: 100%;
 }
 #table-head {
@@ -45,7 +37,7 @@ table {
 td {
   border-bottom: 1px solid #ddd;
   padding: 12px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: left;
 }
 tr:hover {
