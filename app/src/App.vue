@@ -49,9 +49,8 @@ body {
   color: #3a3d40;
 }
 .left-sidebar {
-  width: 20%;
+  width: 15%;
   height: 100%;
-  /* padding-left: 10px; */
   background-color: rgb(46, 58, 70);
 }
 a {
@@ -74,11 +73,11 @@ hr {
   font-size: 16px;
 }
 .content {
-  width: 80%;
+  width: 85%;
   position: absolute;
   right: 0;
-  top: 25px;
-  padding: 10px;
+  top: -2px;
+  padding: 2px;
 }
 .nav-top {
   width: 100%;
