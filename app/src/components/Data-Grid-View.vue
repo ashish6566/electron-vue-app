@@ -1,43 +1,54 @@
 <template>
-  <table id="data-grid-view">
-    <thead>
-      <tr>
-        <th v-for="(col, index) in columns" v-bind:key="index">{{col}}</th>
-      </tr>
-    </thead>
+  <table id="data-grid-view" class="table-responsive">
     <tbody>
+      <tr>
+        <td id="table-head" v-for="(col, index) in columns" v-bind:key="index">{{ col }}</td>
+      </tr>
       <tr v-for="(row, index) in rows" :key="index">
-        <td v-for="col in columns" :key="col">{{col}}</td>
+        <td v-for="col in row" :key="col">{{ col }}</td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
 export default {
   name: "DataGridView",
-  data() {
-    return {
-      rows: []
-    };
-  },
-  computed: {
-    columns: () => {
-      if (this.rows.length == 0) {
-        return [];
-      }
-      return Object.keys(this.rows[0]);
+  // data() {
+  //   return {
+  //     rows: []
+  //   };
+  // },
+  props: {
+    rows: {
+      type: Array,
+      required: true
     },
-    ...mapGetters({
-      students: "STUDENTS"
-    }),
-    ...mapActions({
-      getstudents: "GET_STUDENTS"
-    })
-  },
-  mounted() {
-    console.log(rows);
+    columns: {
+      type: Array,
+      required: true
+    }
   }
 };
 </script>
+<style>
+.table-responsive {
+  overflow: auto;
+}
+table {
+  overflow: auto;
+  width: 100%;
+}
+#table-head {
+  background: rgb(130, 165, 160);
+}
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+</style>
