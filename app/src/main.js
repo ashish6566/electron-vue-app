@@ -7,6 +7,7 @@ import VueElectron from "vue-electron";
 import { dom } from "@fortawesome/fontawesome-svg-core";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 import {
   faUserGraduate,
   faMoneyCheckAlt,
@@ -17,6 +18,10 @@ import {
   faChalkboardTeacher,
   faCogs
 } from "@fortawesome/free-solid-svg-icons";
+
+import vuetify from "./plugins/vuetify";
+import "roboto-fontface/css/roboto/roboto-fontface.css";
+import "@mdi/font/css/materialdesignicons.css";
 
 dom.watch();
 library.add(
@@ -36,5 +41,6 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  vuetify,
   render: h => h(App)
 }).$mount("#app");

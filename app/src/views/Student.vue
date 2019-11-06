@@ -1,19 +1,11 @@
 <template>
   <div class="student">
-    <div class="left-sidebar">
-      <div class="router-link" id="back-home">
-        <router-link to="/">&#9776;&nbsp;Home</router-link>
-      </div>
-      <hr />
-      <h1 class="page-title">Manage Students</h1>
-      <hr />
-      <div class="sub-view-link" id="mng-studentclass">
-        <a class="sub-nav" to="/student/register">Register New Students</a>
-        <a class="sub-nav" to="/student/classes">Update Grades of Students</a>
-      </div>
-    </div>
     <div class="content">
-      <div class="nav-top">Home / Students</div>
+      <div class="nav-top">
+        <div class="router-link" id="back-home">
+          <router-link to="/">&#9776;&nbsp;</router-link>
+        </div>Home / Students
+      </div>
       <hr id="separate-navtop-content" />
       <StudentRegister />
       <hr />

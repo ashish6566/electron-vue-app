@@ -1,7 +1,15 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <v-app id="app">
+    <!-- Provides the application the proper gutter -->
+    <v-content>
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+  </v-app>
+  <!-- <div id="app">
+    
+  </div>-->
 </template>
 <script>
 </script>
@@ -15,17 +23,18 @@
   outline: none;
 }
 body {
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
   font-family: "Roboto", sans-serif;
 }
 #app {
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
 }
-.left-sidebar #back-home a {
+/* .left-sidebar #back-home a {
   font-size: 15px;
 }
 .about,
@@ -58,7 +67,7 @@ a {
 hr {
   size: 1px;
   background: white;
-  /* margin-bottom: 5px; */
+  margin-bottom: 5px;
 }
 .page-title {
   padding: 15px;
@@ -92,5 +101,5 @@ input {
 }
 .home {
   padding-top: 0px;
-}
+} */
 </style>

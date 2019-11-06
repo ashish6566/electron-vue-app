@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <v-container grid-list-xs>
     <div class="head-title">
       <div class="headDiv">
         <h2>
@@ -8,12 +8,12 @@
           <span id="copyright">&copy;</span>
           <!-- require a component to display name as required-->
         </h2>
-      </div>
-      <div class="descDiv">
-        <p id="head-desc">School Management System Specially Created for Shanti Academy.</p>
-      </div>
-      <div class="aboutDiv">
-        <a id="btnAbout">About Developer</a>
+        <div class="descDiv">
+          <p id="head-desc">A Management System Specially Created for Shanti Academy.</p>
+        </div>
+        <div class="aboutDiv">
+          <a id="btnAbout">About Developer</a>
+        </div>
       </div>
     </div>
 
@@ -113,8 +113,7 @@
       </div>
       <!--End of grid-dashboard-->
     </div>
-    <!--End of Dashboard-container-->
-  </div>
+  </v-container>
   <!--End of container-->
 </template>
 <script>
@@ -131,13 +130,10 @@ export default {
   margin: 0 auto;
 }
 .head-title {
-  max-height: 35vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-flow: column;
+  width: 100%;
+  max-height: 40vh;
   padding: 30px;
-  padding-left: 35px;
+  /* padding-left: 35px; */
   background: url(../assets/whitelaptopcropped.jpg) no-repeat;
   background-size: cover;
   background-position: 29% 90%;
@@ -169,7 +165,7 @@ export default {
   padding: 10px 20px;
   font-size: 15px;
 }
-
+/* 
 .dashboard-container .dashboard-section {
   width: 95%;
   margin: auto;
@@ -177,7 +173,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   margin-bottom: 20px;
@@ -231,5 +226,5 @@ export default {
 
 .grid-dashboards .nav-link a:hover .nav-label p {
   color: #07d452;
-}
+} */
 </style>
