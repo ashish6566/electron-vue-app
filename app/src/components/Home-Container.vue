@@ -48,9 +48,9 @@
       </div>
     </v-container>
 
-    <v-container class="grid-dashboards">
-      <v-layout row wrap>
-        <v-flex xs8 md3 ma-2>
+    <v-container class="grid-dashboards" fluid>
+      <v-layout row wrap justify-center>
+        <v-flex xs5 md4 ma-2>
           <router-link to="/student">
             <v-card class="nav-link">
               <v-icon>fas fa-user-graduate</v-icon>
@@ -59,7 +59,7 @@
           </router-link>
         </v-flex>
 
-        <v-flex md4 lg2>
+        <v-flex xs5 md4 ma-2>
           <!-- To do : add v-flex outside v-card -->
           <router-link to="/employee">
             <v-card class="nav-link">
@@ -69,7 +69,7 @@
           </router-link>
         </v-flex>
 
-        <v-flex md4 lg2>
+        <v-flex xs5 md4 ma-2>
           <router-link to="/account">
             <v-card class="nav-link">
               <v-icon>fas fa-money-check-alt</v-icon>
@@ -78,7 +78,7 @@
           </router-link>
         </v-flex>
 
-        <v-flex md4 lg2>
+        <v-flex xs5 md4 ma-2>
           <router-link to="/exams_score">
             <v-card class="nav-link" id="rlExams-score">
               <v-icon>fas fa-book</v-icon>
@@ -87,7 +87,7 @@
           </router-link>
         </v-flex>
 
-        <v-flex md4 lg2>
+        <v-flex xs5 md4 ma-2>
           <router-link to="/library">
             <v-card class="nav-link" id="rlLibrary">
               <v-icon>fas fa-hotel</v-icon>
@@ -96,7 +96,7 @@
           </router-link>
         </v-flex>
 
-        <v-flex md4 lg2>
+        <v-flex xs5 md4 ma-2>
           <router-link to="/transportation">
             <v-card class="nav-link" id="rltransportation">
               <v-icon>fas fa-bus</v-icon>
@@ -105,7 +105,7 @@
           </router-link>
         </v-flex>
 
-        <v-flex md4 lg2>
+        <v-flex xs5 md4 ma-2>
           <router-link to="/admin">
             <v-card class="nav-link" id="rlAdmin">
               <v-icon>fas fa-users-cog</v-icon>
@@ -114,7 +114,7 @@
           </router-link>
         </v-flex>
 
-        <v-flex md4 lg2>
+        <v-flex xs5 md4 ma-2>
           <router-link to="/setting">
             <v-card class="nav-link" id="rlAdmin">
               <v-icon>fas fa-cogs</v-icon>
@@ -200,28 +200,23 @@ export default {
 }
 
 .grid-dashboards {
-  display: grid;
-  grid-template-columns: 19% 19% 19% 19% auto;
-  grid-template-rows: 140px 140px;
-  margin-bottom: 0px;
-  grid-gap: 14px;
-  width: 95%;
-  margin: auto;
+  justify-content: center;
 }
-
+ 
 .grid-dashboards a {
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
-/*  */
-.grid-dashboards .nav-link {
+.nav-link {
   /* display: flex;
   flex-flow: column; */
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
+/* align-items: center; */
+/* justify-content: center; */
+/* height: 100%;
+} 
+   */
+/*  */
 
 .grid-dashboards .nav-link .nav-icon {
   padding: 10px;

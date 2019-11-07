@@ -34,9 +34,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
 }
-#home-container {
-  padding: 0;
-}
+
 /* .left-sidebar #back-home a {
   font-size: 15px;
 }
