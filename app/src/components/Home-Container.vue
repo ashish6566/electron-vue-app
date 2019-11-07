@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-xs>
+  <div class="home-container">
     <div class="head-title">
       <div class="headDiv">
         <h2>
@@ -8,112 +8,124 @@
           <span id="copyright">&copy;</span>
           <!-- require a component to display name as required-->
         </h2>
+
         <div class="descDiv">
           <p id="head-desc">A Management System Specially Created for Shanti Academy.</p>
         </div>
+
         <div class="aboutDiv">
           <a id="btnAbout">About Developer</a>
         </div>
       </div>
     </div>
 
-    <div class="dashboard-container">
+    <v-container
+      align-baseline
+      align-center
+      align-content-center
+      align-content-end
+      align-content-space-around
+      align-content-space-between
+      align-content-start
+      align-end
+      align-start
+      d-flex
+      fill-height
+      fluid
+      grid-list-md
+      id="dashboard-container"
+      justify-center
+      justify-end
+      justify-space-around
+      justify-space-between
+      justify-start
+      reverse
+      tag="div"
+      wrap
+    >
       <div class="dashboard-section">
         <p>DASHBOARD</p>
       </div>
-      <div class="grid-dashboards">
-        <router-link to="/student">
-          <div class="nav-link">
-            <div class="nav-icon">
-              <i class="fas fa-user-graduate"></i>
-            </div>
-            <div class="nav-label">
-              <p>Students</p>
-            </div>
-          </div>
-        </router-link>
+    </v-container>
 
-        <router-link to="/employee">
-          <div class="nav-link">
-            <div class="nav-icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="nav-label">
-              <p>Employee</p>
-            </div>
-          </div>
-        </router-link>
+    <v-container class="grid-dashboards">
+      <v-layout row wrap>
+        <v-flex xs8 md3 ma-2>
+          <router-link to="/student">
+            <v-card class="nav-link">
+              <v-icon>fas fa-user-graduate</v-icon>
+              <v-card-subtitle class="nav-label">Students</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
 
-        <router-link to="/account">
-          <div class="nav-link">
-            <div class="nav-icon">
-              <i class="fas fa-money-check-alt"></i>
-            </div>
-            <div class="nav-label">
-              <p>Account</p>
-            </div>
-          </div>
-        </router-link>
+        <v-flex md4 lg2>
+          <!-- To do : add v-flex outside v-card -->
+          <router-link to="/employee">
+            <v-card class="nav-link">
+              <v-icon>fas fa-chalkboard-teacher</v-icon>
+              <v-card-subtitle class="nav-label">Employee</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
 
-        <router-link to="/exams_score">
-          <div class="nav-link" id="rlExams-score">
-            <div class="nav-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <div class="nav-label">
-              <p>Exams &amp; Scores</p>
-            </div>
-          </div>
-        </router-link>
+        <v-flex md4 lg2>
+          <router-link to="/account">
+            <v-card class="nav-link">
+              <v-icon>fas fa-money-check-alt</v-icon>
+              <v-card-subtitle class="nav-label">Account</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
 
-        <router-link to="/library">
-          <div class="nav-link" id="rlLibrary">
-            <div class="nav-icon">
-              <i class="fas fa-hotel"></i>
-            </div>
-            <div class="nav-label">
-              <p>Library</p>
-            </div>
-          </div>
-        </router-link>
+        <v-flex md4 lg2>
+          <router-link to="/exams_score">
+            <v-card class="nav-link" id="rlExams-score">
+              <v-icon>fas fa-book</v-icon>
+              <v-card-subtitle class="nav-label">Exams &amp; Scores</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
 
-        <router-link to="/transportation">
-          <div class="nav-link" id="rltransportation">
-            <div class="nav-icon">
-              <i class="fas fa-bus"></i>
-            </div>
-            <div class="nav-label">
-              <p>Transportation</p>
-            </div>
-          </div>
-        </router-link>
+        <v-flex md4 lg2>
+          <router-link to="/library">
+            <v-card class="nav-link" id="rlLibrary">
+              <v-icon>fas fa-hotel</v-icon>
+              <v-card-subtitle class="nav-label">Library</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
 
-        <router-link to="/admin">
-          <div class="nav-link" id="rlAdmin">
-            <div class="nav-icon">
-              <i class="fas fa-users-cog"></i>
-            </div>
-            <div class="nav-label">
-              <p>Admin</p>
-            </div>
-          </div>
-        </router-link>
+        <v-flex md4 lg2>
+          <router-link to="/transportation">
+            <v-card class="nav-link" id="rltransportation">
+              <v-icon>fas fa-bus</v-icon>
+              <v-card-subtitle class="nav-label">Transportation</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
 
-        <router-link to="/setting">
-          <!--Need router-link-->
-          <div class="nav-link" id="rlAdmin">
-            <div class="nav-icon">
-              <i class="fas fa-cogs"></i>
-            </div>
-            <div class="nav-label">
-              <p>Setting</p>
-            </div>
-          </div>
-        </router-link>
-      </div>
-      <!--End of grid-dashboard-->
-    </div>
-  </v-container>
+        <v-flex md4 lg2>
+          <router-link to="/admin">
+            <v-card class="nav-link" id="rlAdmin">
+              <v-icon>fas fa-users-cog</v-icon>
+              <v-card-subtitle class="nav-label">Admin</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
+
+        <v-flex md4 lg2>
+          <router-link to="/setting">
+            <v-card class="nav-link" id="rlAdmin">
+              <v-icon>fas fa-cogs</v-icon>
+              <v-card-subtitle class="nav-label">Setting</v-card-subtitle>
+            </v-card>
+          </router-link>
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <!--End of grid-dashboard-->
+  </div>
   <!--End of container-->
 </template>
 <script>
@@ -123,12 +135,13 @@ export default {
 </script>
 
 <style scoped>
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-}
+} */
+
 .head-title {
   width: 100%;
   max-height: 40vh;
@@ -201,10 +214,10 @@ export default {
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
 }
-
+/*  */
 .grid-dashboards .nav-link {
-  display: flex;
-  flex-flow: column;
+  /* display: flex;
+  flex-flow: column; */
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -226,5 +239,6 @@ export default {
 
 .grid-dashboards .nav-link a:hover .nav-label p {
   color: #07d452;
-} */
+}
+/* */
 </style>

@@ -2,7 +2,7 @@
   <v-app id="app">
     <!-- Provides the application the proper gutter -->
     <v-content>
-      <v-container fluid>
+      <v-container fluid id="home-container">
         <router-view></router-view>
       </v-container>
     </v-content>
@@ -33,6 +33,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
+}
+#home-container {
+  padding: 0;
 }
 /* .left-sidebar #back-home a {
   font-size: 15px;
