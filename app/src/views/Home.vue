@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <v-content>
     <HomeContainer></HomeContainer>
-  </div>
+  </v-content>
   <!--End of Home-->
 </template>
 

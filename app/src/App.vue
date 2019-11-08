@@ -1,11 +1,20 @@
 <template>
   <v-app id="app">
     <!-- Provides the application the proper gutter -->
-    <v-content>
-      <v-container fluid id="home-container">
-        <router-view></router-view>
-      </v-container>
-    </v-content>
+    <v-system-bar window color="transparent">
+      <div id="win-controls">
+        <v-btn text tile>
+          <v-icon dense>mdi-minus</v-icon>
+        </v-btn>
+        <v-btn text tile>
+          <v-icon dense>mdi-checkbox-blank-outline</v-icon>
+        </v-btn>
+        <v-btn text tile>
+          <v-icon dense>mdi-close</v-icon>
+        </v-btn>
+      </div>
+    </v-system-bar>
+    <router-view></router-view>
   </v-app>
   <!-- <div id="app">
     
@@ -27,80 +36,27 @@ body {
   font-family: "Roboto", sans-serif;
 }
 #app {
-  /* height: 100%;
-  width: 100%; */
-  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fff;
+  color: rgb(49, 49, 49);
 }
-
-/* .left-sidebar #back-home a {
-  font-size: 15px;
+#home-container {
+  padding: 0;
 }
-.about,
-.account,
-.admin,
-.exams-scores,
-.employee,
-.library,
-.student,
-.transportation,
-.setting {
-  height: 96vh;
-  background: white;
-  color: #3a3d40;
-}
-.left-sidebar {
-  width: 15%;
-  height: 100%;
-  background-color: rgb(46, 58, 70);
-}
-a {
-  text-decoration: none;
-  color: #fff;
+#win-controls {
+  position: absolute;
+  right: 3px;
 }
 #back-home {
   width: 100%;
   display: block;
   padding: 10px 0;
 }
-hr {
-  size: 1px;
-  background: white;
-  margin-bottom: 5px;
-}
-.page-title {
-  padding: 15px;
-  color: white;
-  font-size: 16px;
-}
-.content {
-  width: 85%;
-  position: absolute;
-  right: 0;
-  top: -2px;
-  padding: 2px;
-}
-.nav-top {
+/* .nav-top {
   width: 100%;
   padding: 10px;
   font-size: 1.2rem;
   color: #0f0c29;
-}
-label {
-  font-size: 1.3rem;
-  padding: 10px;
-}
-input {
-  margin-bottom: 5px;
-  font-size: 14px;
-  padding: 5px auto;
-  border: 1px solid rgb(192, 191, 191);
-  border-radius: 1px;
-  box-shadow: 5px 5px 20px rgb(224, 220, 220);
-}
-.home {
-  padding-top: 0px;
 } */
 </style>

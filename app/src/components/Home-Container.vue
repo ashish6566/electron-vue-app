@@ -1,123 +1,100 @@
 <template>
-  <div class="home-container">
-    <div class="head-title">
-      <div class="headDiv">
-        <h2>
+  <v-container class="home" fluid>
+    <!--  -->
+    <v-container class="head-title" fluid>
+      <v-container grid-list-xs>
+        <h1>
           Shanti Academy
           <br />Information Management System
           <span id="copyright">&copy;</span>
           <!-- require a component to display name as required-->
-        </h2>
-
-        <div class="descDiv">
-          <p id="head-desc">A Management System Specially Created for Shanti Academy.</p>
-        </div>
-
-        <div class="aboutDiv">
-          <a id="btnAbout">About Developer</a>
-        </div>
-      </div>
-    </div>
-
-    <v-container
-      align-baseline
-      align-center
-      align-content-center
-      align-content-end
-      align-content-space-around
-      align-content-space-between
-      align-content-start
-      align-end
-      align-start
-      d-flex
-      fill-height
-      fluid
-      grid-list-md
-      id="dashboard-container"
-      justify-center
-      justify-end
-      justify-space-around
-      justify-space-between
-      justify-start
-      reverse
-      tag="div"
-      wrap
-    >
-      <div class="dashboard-section">
-        <p>DASHBOARD</p>
-      </div>
+        </h1>
+        <p id="head-desc">A Management System Specially Created for Shanti Academy.</p>
+      </v-container>
+      <!-- <v-container id="descDiv">
+      </v-container>-->
+      <v-container>
+        <v-btn id="website-link" tile orange>go the school website</v-btn>
+      </v-container>
     </v-container>
 
-    <v-container class="grid-dashboards" fluid>
+    <v-container id="dashbrd-title-container">
+      <v-layout row justify-center>
+        <strong id="dashboard-title">Dashboard</strong>
+      </v-layout>
+    </v-container>
+
+    <v-container class="dashboard-container" fill-height fluid>
       <v-layout row wrap justify-center>
-        <v-flex xs5 md4 ma-2>
+        <!--  -->
+        <v-flex sm4 md3 ma-1>
           <router-link to="/student">
-            <v-card class="nav-link">
-              <v-icon>fas fa-user-graduate</v-icon>
+            <v-card class="nav-link" tile>
+              <v-icon class="dashbrd-icons">fas fa-user-graduate</v-icon>
               <v-card-subtitle class="nav-label">Students</v-card-subtitle>
             </v-card>
           </router-link>
         </v-flex>
 
-        <v-flex xs5 md4 ma-2>
+        <v-flex sm4 md3 ma-1>
           <!-- To do : add v-flex outside v-card -->
           <router-link to="/employee">
-            <v-card class="nav-link">
-              <v-icon>fas fa-chalkboard-teacher</v-icon>
+            <v-card class="nav-link" tile>
+              <v-icon class="dashbrd-icons">fas fa-chalkboard-teacher</v-icon>
               <v-card-subtitle class="nav-label">Employee</v-card-subtitle>
             </v-card>
           </router-link>
         </v-flex>
 
-        <v-flex xs5 md4 ma-2>
+        <v-flex sm4 md3 ma-1>
           <router-link to="/account">
-            <v-card class="nav-link">
-              <v-icon>fas fa-money-check-alt</v-icon>
+            <v-card class="nav-link" tile>
+              <v-icon class="dashbrd-icons">fas fa-money-check-alt</v-icon>
               <v-card-subtitle class="nav-label">Account</v-card-subtitle>
             </v-card>
           </router-link>
         </v-flex>
 
-        <v-flex xs5 md4 ma-2>
-          <router-link to="/exams_score">
-            <v-card class="nav-link" id="rlExams-score">
-              <v-icon>fas fa-book</v-icon>
+        <v-flex sm4 md3 ma-1>
+          <router-link to="/exams_score" tile>
+            <v-card class="nav-link" id="rlExams-score" tile>
+              <v-icon class="dashbrd-icons">fas fa-book</v-icon>
               <v-card-subtitle class="nav-label">Exams &amp; Scores</v-card-subtitle>
             </v-card>
           </router-link>
         </v-flex>
 
-        <v-flex xs5 md4 ma-2>
-          <router-link to="/library">
-            <v-card class="nav-link" id="rlLibrary">
-              <v-icon>fas fa-hotel</v-icon>
+        <v-flex sm4 md3 ma-1>
+          <router-link to="/library" tile>
+            <v-card class="nav-link" id="rlLibrary" tile>
+              <v-icon class="dashbrd-icons">fas fa-hotel</v-icon>
               <v-card-subtitle class="nav-label">Library</v-card-subtitle>
             </v-card>
           </router-link>
         </v-flex>
 
-        <v-flex xs5 md4 ma-2>
-          <router-link to="/transportation">
+        <v-flex sm4 md3 ma-1>
+          <router-link to="/transportation" tile>
             <v-card class="nav-link" id="rltransportation">
-              <v-icon>fas fa-bus</v-icon>
+              <v-icon class="dashbrd-icons">fas fa-bus</v-icon>
               <v-card-subtitle class="nav-label">Transportation</v-card-subtitle>
             </v-card>
           </router-link>
         </v-flex>
 
-        <v-flex xs5 md4 ma-2>
+        <v-flex sm4 md3 ma-1>
           <router-link to="/admin">
-            <v-card class="nav-link" id="rlAdmin">
-              <v-icon>fas fa-users-cog</v-icon>
+            <v-card class="nav-link" id="rlAdmin" tile>
+              <v-icon class="dashbrd-icons">fas fa-users-cog</v-icon>
               <v-card-subtitle class="nav-label">Admin</v-card-subtitle>
             </v-card>
           </router-link>
         </v-flex>
 
-        <v-flex xs5 md4 ma-2>
+        <v-flex sm4 md3 ma-1>
           <router-link to="/setting">
-            <v-card class="nav-link" id="rlAdmin">
-              <v-icon>fas fa-cogs</v-icon>
+            <v-card class="nav-link" id="rlAdmin" tile>
+              <v-icon class="dashbrd-icons">fas fa-cogs</v-icon>
               <v-card-subtitle class="nav-label">Setting</v-card-subtitle>
             </v-card>
           </router-link>
@@ -125,7 +102,7 @@
       </v-layout>
     </v-container>
     <!--End of grid-dashboard-->
-  </div>
+  </v-container>
   <!--End of container-->
 </template>
 <script>
@@ -135,48 +112,45 @@ export default {
 </script>
 
 <style scoped>
-/* .container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-} */
-
-.head-title {
-  width: 100%;
-  max-height: 40vh;
-  padding: 30px;
-  /* padding-left: 35px; */
-  background: url(../assets/whitelaptopcropped.jpg) no-repeat;
-  background-size: cover;
-  background-position: 29% 90%;
-  margin-bottom: 20px;
+.home {
+  padding: 0;
 }
-.head-title h2 {
+.head-title-bg {
+  padding: 0;
+  /* background-image: ""; */
+}
+.head-title h1 {
   font-size: 35px;
-  /* color:  #353535 ; */
-  color: #575758;
-  margin-bottom: 15px;
+  color: #575758; /* change color after head-title gets bg img */
+  margin-top: 40px;
 }
 
-.head-title h2 #copyright {
+#copyright {
   font-size: 15px;
 }
 
-.head-title #head-desc {
+#head-desc {
   font-size: 15px;
   color: #353535;
-  margin-bottom: 20px;
 }
 
-.head-title .aboutDiv {
-  padding-right: 100px;
-}
-
-.head-title #btnAbout {
+#website-link {
   background-color: #ff9f10;
   padding: 10px 20px;
   font-size: 15px;
+}
+#dashbrd-title-container {
+  padding: 0;
+}
+
+#dashboard-title {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.dashbrd-icons {
+  font-size: 48px;
+  margin: 10px;
 }
 /* 
 .dashboard-container .dashboard-section {
@@ -198,25 +172,6 @@ export default {
   border-bottom: 2px solid;
   border-bottom-color: #07d452;
 }
-
-.grid-dashboards {
-  justify-content: center;
-}
- 
-.grid-dashboards a {
-  font-size: 30px;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
-}
-.nav-link {
-  /* display: flex;
-  flex-flow: column; */
-/* align-items: center; */
-/* justify-content: center; */
-/* height: 100%;
-} 
-   */
-/*  */
 
 .grid-dashboards .nav-link .nav-icon {
   padding: 10px;
