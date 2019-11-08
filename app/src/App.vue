@@ -6,9 +6,9 @@
         <v-btn text tile>
           <v-icon dense>mdi-minus</v-icon>
         </v-btn>
-        <v-btn text tile>
+        <!-- <v-btn text tile>
           <v-icon dense>mdi-checkbox-blank-outline</v-icon>
-        </v-btn>
+        </v-btn>-->
         <v-btn text tile>
           <v-icon dense>mdi-close</v-icon>
         </v-btn>
