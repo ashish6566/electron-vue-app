@@ -1,159 +1,237 @@
 <template>
   <v-container class="student-register" fluid>
-    <v-layout row wrap>
-      <form>
-        <v-text-field
-          label="Name"
-          v-model="name"
-          :error-messages="nameErrors"
-          :counter="10"
-          @input="v.name.touch()"
-          @blur="v.name.touch()"
-          required
-        ></v-text-field>
-        <v-text-field
-          label="E-mail"
-          v-model="email"
-          :error-messages="emailErrors"
-          @input="v.email.touch()"
-          @blur="v.email.touch()"
-          required
-        ></v-text-field>
-        <v-select
-          label="Item"
-          v-model="select"
-          :items="items"
-          :error-messages="selectErrors"
-          @change="v.select.touch()"
-          @blur="v.select.touch()"
-          required
-        ></v-select>
-        <v-checkbox
-          label="Do you agree?"
-          v-model="checkbox"
-          :error-messages="checkboxErrors"
-          @change="v.checkbox.touch()"
-          @blur="v.checkbox.touch()"
-          required
-        ></v-checkbox>
-        <v-btn @click="submit">submit</v-btn>
-        <v-btn @click="clear">clear</v-btn>
-      </form>
-    </v-layout>
+    <h1>New Student Registration</h1>
+    <form>
+      <v-layout row wrap>
+        <v-flex md6 lg6 pa-2>
+          <v-text-field
+            label="First Name"
+            class="txtBox"
+            v-model="firstname"
+            :error-messages="firstnameErrors"
+            :counter="10"
+            @input="v.firstname.touch()"
+            @blur="v.firstname.touch()"
+            required
+            outlined
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex md6 lg6 pa-2>
+          <v-text-field
+            label="Last Name"
+            class="txtBox"
+            v-model="surname"
+            :error-messages="surnameErrors"
+            :counter="10"
+            @input="v.surname.touch()"
+            @blur="v.surname.touch()"
+            required
+            outlined
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex md5 lg4 pa-2>
+          <v-select
+            label="Gender"
+            class="txtBox"
+            v-model="gender"
+            :items="items"
+            :error-messages="genderErrors"
+            @change="v.gender.touch()"
+            @blur="v.gender.touch()"
+            required
+            outlined
+          ></v-select>
+        </v-flex>
+
+        <v-flex md5 lg4 pa-3>
+          <Datepicker
+            id="stdnt-birthdate"
+            v-model="birthdate"
+            placeholder="Date of Birth"
+            input-class="txtBox"
+            wrapper-class="datepicker"
+            @input="v.birthdate.touch()"
+            clear-button
+            required
+          ></Datepicker>
+          <span id="date-picker-error">{{ datePickerError }}</span>
+        </v-flex>
+
+        <v-flex md6 lg6 pa-3>
+          <v-text-field
+            label="Guardian Name"
+            class="txtBox"
+            v-model="guardianname"
+            :error-messages="guardiannameErrors"
+            :counter="10"
+            @input="v.guardianname.touch()"
+            @blur="v.guardianname.touch()"
+            required
+            outlined
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex md6 lg6 pa-3>
+          <v-text-field
+            label="Address"
+            class="txtBox"
+            v-model="address"
+            :error-messages="addressErrors"
+            :counter="10"
+            @input="v.address.touch()"
+            @blur="v.address.touch()"
+            required
+            outlined
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex md6 lg6 pa-3>
+          <v-text-field
+            label="Contact"
+            class="txtBox"
+            v-model="contact"
+            :error-messages="contactErrors"
+            :counter="10"
+            @input="$v.contact.touch()"
+            @blur="$v.contact.touch()"
+            required
+            outlined
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex md6 lg6 pa-3>
+          <v-text-field
+            label="E-mail"
+            class="txtBox"
+            v-model="email"
+            :error-messages="emailErrors"
+            @input="$v.email.touch()"
+            @blur="$v.email.touch()"
+            required
+            outlined
+          ></v-text-field>
+        </v-flex>
+
+        <v-flex md8 lg6>
+          <v-btn @click="register" tile>register</v-btn>
+          <v-btn @click="clear" tile>clear</v-btn>
+        </v-flex>
+      </v-layout>
+    </form>
   </v-container>
 </template>
 
 <script>
-import { validationMixin } from "vuelidate";
+import Datepicker from "vuejs-datepicker";
+// import { validationMixin } from "vuelidate";
 import { required, maxLength, email } from "vuelidate/lib/validators";
 
 export default {
   name: "StudentRegister",
-  mixins: [validationMixin],
+  components: {
+    Datepicker
+  },
+  // mixins: [validationMixin],
   validations: {
-    name: { required, maxLength: maxLength(10) },
-    email: { required, email },
-    select: { required },
-    checkbox: { required }
+    firstname: { required, maxLength: maxLength(40) },
+    surname: { required, maxLength: maxLength(40) },
+    birthdate: { required },
+    guardianname: { required },
+    contact: { required, maxLength: maxLength(15) },
+    address: { required },
+    email: { email },
+    gender: { required }
   },
   data: () => ({
-    name: "",
+    firstname: "",
+    surname: "",
+    guardianname: "",
+    gender: null,
+    birthdate: "",
+    address: "",
+    contact: "",
     email: "",
-    select: null,
-    items: ["Item 1", "Item 2", "Item 3", "Item 4"],
-    checkbox: false
+    items: ["Male", "Female", "Other"],
+    datePickerError: ""
   }),
   computed: {
-    checkboxErrors() {
+    firstnameErrors() {
       const errors = [];
-      if (!this.v.checkbox.dirty) return errors;
-      !this.v.checkbox.required && errors.push("You must agree to continue!");
+      if (!this.$v.firstname.dirty) return errors;
+      !this.$v.firstname.maxLength &&
+        errors.push("Name must be at most 40 characters long");
+      !this.$v.firstname.required && errors.push("First Name is required.");
       return errors;
     },
-    selectErrors() {
+    surnameErrors() {
       const errors = [];
-      if (!this.v.select.dirty) return errors;
-      !this.v.select.required && errors.push("Item is required");
-      return errors;
-    },
-    nameErrors() {
-      const errors = [];
-      if (!this.v.name.dirty) return errors;
-      !this.v.name.maxLength &&
+      if (!this.$v.surname.dirty) return errors;
+      !this.$v.surname.maxLength &&
         errors.push("Name must be at most 10 characters long");
-      !this.v.name.required && errors.push("Name is required.");
+      !this.$v.surname.required && errors.push("Last Name is required.");
+      return errors;
+    },
+    genderErrors() {
+      const errors = [];
+      if (!this.$v.gender.dirty) return errors;
+      !this.$v.gender.required && errors.push("Gender is required");
+      return errors;
+    },
+
+    guardiannameErrors() {
+      const errors = [];
+      if (!this.$v.guardianname.dirty) return errors;
+      !this.$v.guardianname.required &&
+        errors.push("Guardian Name is required.");
+      return errors;
+    },
+    addressErrors() {
+      const errors = [];
+      if (!this.$v.address.dirty) return errors;
+      !this.$v.address.required && errors.push("Address is required.");
+      return errors;
+    },
+    contactErrors() {
+      const errors = [];
+      if (!this.$v.contact.dirty) return errors;
+      !this.$v.contact.maxLength &&
+        errors.push("Name must be at most 15 characters long");
+      !this.$v.contact.required && errors.push("Contact is required.");
       return errors;
     },
     emailErrors() {
       const errors = [];
-      if (!this.v.email.dirty) return errors;
-      !this.v.email.email && errors.push("Must be valid e-mail");
-      !this.v.email.required && errors.push("E-mail is required");
+      if (!this.$v.email.dirty) return errors;
+      !this.$v.email.email && errors.push("Must be valid e-mail");
       return errors;
     }
   },
   methods: {
-    submit() {
+    register() {
       this.v.touch();
     },
     clear() {
-      this.v.reset();
-      this.name = "";
+      this.$v.reset();
+      this.firstname = "";
+      this.surname = "";
+      this.gender = null;
+      this.birthdate = "";
+      this.guardianname = "";
+      this.address = "";
+      this.contact = "";
       this.email = "";
-      this.select = null;
-      this.checkbox = false;
+    },
+    datepickerErrors() {
+      const errors = [];
+      if (!this.$v.birthdate.dirty) return errors;
+      !this.$v.birthdate.required && errors.push("Date of Birth is required");
+      this.datepickerError = errors;
     }
   }
 };
 </script>
 
 <style scoped>
-/* .student-register {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  grid-auto-flow: row;
-  padding: 10px;
-}
-.form {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-}
-.form label {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-input {
-  grid-column-start: 2;
-  grid-column-end: 5;
-  outline: none;
-  padding: 10px;
-}
-#datepicker,
-#phone {
-  grid-column-end: 3;
-}
-#lbl-gender,
-#lbl-landline {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-#lbl-gender {
-  padding-left: 3rem;
-}
-#gender,
-#landline {
-  grid-column-start: 4;
-}
-.crud-buttons {
-  padding: 10px;
-}
-button {
-  width: 150px;
-  margin: 5px;
-  padding: 10px;
-  font-size: 15px;
-} */
 </style>
