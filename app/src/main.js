@@ -18,6 +18,8 @@ import {
   faCogs
 } from "@fortawesome/free-solid-svg-icons";
 
+import VueElectron from "vue-electron";
+import Vuelidate from "vuelidate";
 import vuetify from "./plugins/vuetify";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
@@ -36,6 +38,9 @@ library.add(
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
+
+Vue.use(Vuelidate);
+Vue.use(VueElectron);
 
 new Vue({
   router,
