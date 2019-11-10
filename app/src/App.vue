@@ -17,8 +17,6 @@
 </template>
 
 <script>
-import electron from "electron";
-
 export default {
   data() {
     return {
@@ -27,11 +25,11 @@ export default {
   },
   methods: {
     close() {
-      var window = electron.remote.BrowserWindow.getFocusedWindow();
+      var window = this.$electron.remote.BrowserWindow.getFocusedWindow();
       window.close();
     },
     minimize() {
-      var window = electron.remote.BrowserWindow.getFocusedWindow();
+      var window = this.$electron.remote.BrowserWindow.getFocusedWindow();
       window.minimize();
     },
     returnhome() {
