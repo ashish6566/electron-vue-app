@@ -107,7 +107,7 @@
 </template>
 <script>
 export default {
-  name: "Container"
+  name: "HomeContainer"
 };
 </script>
 
@@ -115,8 +115,9 @@ export default {
 .home {
   padding: 0;
 }
-.head-title-bg {
+.head-title {
   padding: 0;
+
   /* background-image: ""; */
 }
 .head-title h1 {
@@ -152,43 +153,8 @@ export default {
   font-size: 48px;
   margin: 10px;
 }
-/* 
-.dashboard-container .dashboard-section {
-  width: 95%;
-  margin: auto;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(5px);
-  margin-bottom: 20px;
-}
 
-.dashboard-container .dashboard-section p {
-  font-size: 20px;
-  padding-top: 5px;
-  text-align: center;
-  border-bottom: 2px solid;
-  border-bottom-color: #07d452;
+.nav-label {
+  padding: 7px;
 }
-
-.grid-dashboards .nav-link .nav-icon {
-  padding: 10px;
-}
-.grid-dashboards .nav-link .nav-icon svg {
-  font-size: 30px;
-}
-.grid-dashboards .nav-link .nav-label p {
-  font-size: 15px;
-}
-.grid-dashboards > a:hover {
-  border: #07d452 1px solid;
-  margin: -1.1167px;
-}
-
-.grid-dashboards .nav-link a:hover .nav-label p {
-  color: #07d452;
-}
-/* */
 </style>

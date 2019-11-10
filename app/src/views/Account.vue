@@ -7,6 +7,7 @@
       <hr />
       <h1 class="page-title">Manage Accounts</h1>
       <hr />
+      <v-icon>home</v-icon>
     </div>
   </div>
 </template>

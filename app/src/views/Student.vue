@@ -1,17 +1,8 @@
 <template>
-  <div class="student">
-    <div class="content">
-      <div class="nav-top">
-        <div class="router-link" id="back-home">
-          <router-link to="/">&#9776;&nbsp;</router-link>
-        </div>Home / Students
-      </div>
-      <hr id="separate-navtop-content" />
-      <StudentRegister />
-      <hr />
-      <StudentGrid />
-    </div>
-  </div>
+  <v-content class="student">
+    <StudentRegister />
+    <StudentGrid />
+  </v-content>
 </template>
 
 <script>

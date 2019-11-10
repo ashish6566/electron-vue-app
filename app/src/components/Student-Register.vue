@@ -1,80 +1,114 @@
 <template>
-  <div class="student-register">
-    <div class="form">
-      <label for="studentName" id="lbl-studentname">Student Name:</label>
-      <input
-        type="text"
-        name="student_name"
-        id="student_name"
-        placeholder="Please provide full name"
-      />
-
-      <label for="datepicker" id="lbl-dateofbirth">Date of Birth:</label>
-      <input type="date" min="2000-01-01" max="2100-12-30" name="datepicker" id="datepicker" />
-
-      <label for="gender" id="lbl-gender">Gender:</label>
-      <input type="text" name="gender" id="gender" list="list-gender" placeholder="Choose" />
-      <datalist id="list-gender">
-        <option value="Male"></option>
-        <option value="Female"></option>
-        <option value="Others"></option>
-      </datalist>
-
-      <label for="guardian-name" id="lbl-guardian-name">Guardian Name:</label>
-      <input
-        type="text"
-        name="guardian-name"
-        id="guardian-name"
-        placeholder="Please provide full name"
-      />
-
-      <label for="address" id="lbl-address">Address:</label>
-      <input
-        type="text"
-        name="address"
-        id="address"
-        placeholder="minimum street/community, village/town/city, district"
-      />
-
-      <label for="phone" id="lbl-phone">Phone No:</label>
-      <input type="text" name="phone" id="phone" placeholder="Mobile Phone no." />
-
-      <label for="landline" id="lbl-landline">LandLine:</label>
-      <input type="text" name="landline" id="landline" placeholder="(optional)" />
-
-      <label for="email" id="lbl-email">Email:</label>
-      <input type="email" name="email" id="email" placeholder="abc@example.com (optional)" />
-    </div>
-    <div class="crud-buttons">
-      <button type="submit">Register</button>
-      <br />
-      <button type="submit">Modify</button>
-      <br />
-      <button type="submit">Delete</button>
-      <br />
-      <button type="submit">Register</button>
-      <br />
-      <button type="reset">Clear</button>
-    </div>
-  </div>
+  <v-container class="student-register" fluid>
+    <v-layout row wrap>
+      <form>
+        <v-text-field
+          label="Name"
+          v-model="name"
+          :error-messages="nameErrors"
+          :counter="10"
+          @input="v.name.touch()"
+          @blur="v.name.touch()"
+          required
+        ></v-text-field>
+        <v-text-field
+          label="E-mail"
+          v-model="email"
+          :error-messages="emailErrors"
+          @input="v.email.touch()"
+          @blur="v.email.touch()"
+          required
+        ></v-text-field>
+        <v-select
+          label="Item"
+          v-model="select"
+          :items="items"
+          :error-messages="selectErrors"
+          @change="v.select.touch()"
+          @blur="v.select.touch()"
+          required
+        ></v-select>
+        <v-checkbox
+          label="Do you agree?"
+          v-model="checkbox"
+          :error-messages="checkboxErrors"
+          @change="v.checkbox.touch()"
+          @blur="v.checkbox.touch()"
+          required
+        ></v-checkbox>
+        <v-btn @click="submit">submit</v-btn>
+        <v-btn @click="clear">clear</v-btn>
+      </form>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
+import { validationMixin } from "vuelidate";
+import { required, maxLength, email } from "vuelidate/lib/validators";
+
 export default {
-  name: "StudentRegister"
-  //   data() {
-  //     return {
-  //       key: value
-  //     };
-  //   },
-  //   methods: {
-  //     name() {}
-  //   }
+  name: "StudentRegister",
+  mixins: [validationMixin],
+  validations: {
+    name: { required, maxLength: maxLength(10) },
+    email: { required, email },
+    select: { required },
+    checkbox: { required }
+  },
+  data: () => ({
+    name: "",
+    email: "",
+    select: null,
+    items: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    checkbox: false
+  }),
+  computed: {
+    checkboxErrors() {
+      const errors = [];
+      if (!this.v.checkbox.dirty) return errors;
+      !this.v.checkbox.required && errors.push("You must agree to continue!");
+      return errors;
+    },
+    selectErrors() {
+      const errors = [];
+      if (!this.v.select.dirty) return errors;
+      !this.v.select.required && errors.push("Item is required");
+      return errors;
+    },
+    nameErrors() {
+      const errors = [];
+      if (!this.v.name.dirty) return errors;
+      !this.v.name.maxLength &&
+        errors.push("Name must be at most 10 characters long");
+      !this.v.name.required && errors.push("Name is required.");
+      return errors;
+    },
+    emailErrors() {
+      const errors = [];
+      if (!this.v.email.dirty) return errors;
+      !this.v.email.email && errors.push("Must be valid e-mail");
+      !this.v.email.required && errors.push("E-mail is required");
+      return errors;
+    }
+  },
+  methods: {
+    submit() {
+      this.v.touch();
+    },
+    clear() {
+      this.v.reset();
+      this.name = "";
+      this.email = "";
+      this.select = null;
+      this.checkbox = false;
+    }
+  }
 };
 </script>
 
 <style scoped>
-.student-register {
+/* .student-register {
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   grid-auto-flow: row;
@@ -121,5 +155,5 @@ button {
   margin: 5px;
   padding: 10px;
   font-size: 15px;
-}
+} */
 </style>

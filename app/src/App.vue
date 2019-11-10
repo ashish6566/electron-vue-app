@@ -1,27 +1,46 @@
 <template>
   <v-app id="app">
     <!-- Provides the application the proper gutter -->
-    <v-system-bar window color="transparent">
-      <div id="win-controls">
-        <v-btn text tile>
-          <v-icon dense>mdi-minus</v-icon>
-        </v-btn>
-        <!-- <v-btn text tile>
-          <v-icon dense>mdi-checkbox-blank-outline</v-icon>
-        </v-btn>-->
-        <v-btn text tile>
-          <v-icon dense>mdi-close</v-icon>
-        </v-btn>
-      </div>
-    </v-system-bar>
+
+    <v-container id="app-bar" fluid pa-0>
+      <v-app-bar-nav-icon id="btn-home" @click="returnhome" />
+      <v-btn class="btn-ctrl" icon @click="minimize">
+        <v-icon id="btn-min">mdi-minus</v-icon>
+      </v-btn>&nbsp;&nbsp;
+      <v-btn class="btn-ctrl" icon @click="close">
+        <v-icon id="btn-close">mdi-close</v-icon>
+      </v-btn>
+    </v-container>
+
     <router-view></router-view>
   </v-app>
-  <!-- <div id="app">
-    
-  </div>-->
 </template>
+
 <script>
+import electron from "electron";
+
+export default {
+  data() {
+    return {
+      isHome: true
+    };
+  },
+  methods: {
+    close() {
+      var window = electron.remote.BrowserWindow.getFocusedWindow();
+      window.close();
+    },
+    minimize() {
+      var window = electron.remote.BrowserWindow.getFocusedWindow();
+      window.minimize();
+    },
+    returnhome() {
+      this.$router.push("/");
+    }
+  }
+};
 </script>
+
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
 * {
@@ -31,32 +50,42 @@
   box-sizing: border-box;
   outline: none;
 }
+
 body {
   /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
   font-family: "Roboto", sans-serif;
 }
+
 #app {
   /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgb(49, 49, 49);
 }
+
 #home-container {
   padding: 0;
 }
-#win-controls {
-  position: absolute;
-  right: 3px;
+#app-bar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  padding: 0%;
 }
-#back-home {
-  width: 100%;
-  display: block;
-  padding: 10px 0;
+
+.btn-ctrl {
+  position: relative;
+  left: calc(100% - 130px);
 }
-/* .nav-top {
-  width: 100%;
-  padding: 10px;
-  font-size: 1.2rem;
-  color: #0f0c29;
+#btn-close:hover {
+  color: red;
+}
+
+#btn-min:hover {
+  color: darkslateblue;
+}
+
+/* #back-home {
+  position: relative;
+  right: 50%; 
 } */
 </style>
