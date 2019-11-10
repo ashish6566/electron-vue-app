@@ -17,13 +17,13 @@
         <v-btn id="website-link" tile orange>go the school website</v-btn>
       </v-container>
     </v-container>
-
+    <!-- end of head-title -->
     <v-container id="dashbrd-title-container">
       <v-layout row justify-center>
         <strong id="dashboard-title">Dashboard</strong>
       </v-layout>
     </v-container>
-
+    <!-- end of dashboard-title-container -->
     <v-container class="dashboard-container" fill-height fluid>
       <v-layout row wrap justify-center>
         <!--  -->
@@ -101,9 +101,8 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <!--End of grid-dashboard-->
+    <!--End of dashboard-contaier -->
   </v-container>
-  <!--End of container-->
 </template>
 <script>
 export default {
